@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ticketya</title>
+  <title>ちけっとや</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+<a id="logo">ちけっとや</a>　チケット販売システム
+<div id="account">
+<a id="account_login">ログイン</a>
+<a id="account_signup">新規登録</a>
+</div>
+</header>
 
 <%= yield %>
 

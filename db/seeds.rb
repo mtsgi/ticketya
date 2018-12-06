@@ -1,7 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Event.create(name:"ライブ1", artist:"アーティストA", place_id:1, date:"Sat,1 Dec 2018", comment:"このライブは[日付]に開催される[アーティスト]のライブです。会場は[会場]です。", available:true, hall:"会場A")
+Event.create(name:"ライブ2", artist:"アーティストA", place_id:1, date:"Sun,2 Dec 2018", comment:"このライブは[日付]に開催される[アーティスト]のライブです。会場は[会場]です。", available:true, hall:"会場B")
+Event.create(name:"ライブ3", artist:"アーティストB", place_id:1, date:"Sat,1 Dec 2018", comment:"このライブは[日付]に開催される[アーティスト]のライブです。会場は[会場]です。", available:true, hall:"会場B")
+Event.create(name:"ライブ4", artist:"アーティストB", place_id:1, date:"Sun,2 Dec 2018", comment:"このライブは[日付]に開催される[アーティスト]のライブです。会場は[会場]です。", available:true, hall:"会場A")
+Event.create(name:"ライブ5", artist:"アーティストB", place_id:1, date:"Sun,2 Dec 2018", comment:"このライブは[日付]に開催される[アーティスト]のライブです。会場は[会場]です。", available:true, hall:"会場B")

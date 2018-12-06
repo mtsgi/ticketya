@@ -1,0 +1,14 @@
+<%= render("shared/nav") %>
+
+<div id="R">
+
+<%= render("shared/search") %>
+
+<div class="box">
+<aside>最新の5件</aside>
+<% @events.each do |l| %>
+<%= l.name %>
+<% end %>
+</div>
+
+</div>
