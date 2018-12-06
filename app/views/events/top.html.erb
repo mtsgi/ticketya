@@ -5,7 +5,7 @@
     <%= render("shared/search") %>
 
     <div class="box">
-        <aside>最新の5件</aside>
+        <aside><%= @asideTitle %></aside>
         <% @events.each do |l| %>
         <div class="event">
             <div class="event-name">
