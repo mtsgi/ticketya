@@ -1,30 +1,32 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
-
-
- */
-
-
- body{
+body{
     margin : 0px;
+    overflow-x: hidden;
+background: -moz-linear-gradient(-45deg, rgba(73,155,234,1) 0%, rgba(186,219,255,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(73,155,234,1)), color-stop(100%, rgba(186,219,255,1)));
+background: -webkit-linear-gradient(-45deg, rgba(73,155,234,1) 0%, rgba(186,219,255,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(73,155,234,1) 0%, rgba(186,219,255,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(73,155,234,1) 0%, rgba(186,219,255,1) 100%);
+background: linear-gradient(135deg, rgba(73,155,234,1) 0%, rgba(186,219,255,1) 100%);
 }
 header{
+    box-sizing: border-box;
+    position: fixed;
+    top : 0px;
+    width: 100%;
     color: #ffffff;
+    z-index: 999;
     background : #2f80a8;
+    background: -moz-linear-gradient(45deg, rgba(16,108,207,1) 0%, rgba(56,209,255,1) 49%, rgba(57,217,17,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(16,108,207,1)), color-stop(49%, rgba(56,209,255,1)), color-stop(100%, rgba(57,217,17,1)));
+    background: -webkit-linear-gradient(45deg, rgba(16,108,207,1) 0%, rgba(56,209,255,1) 49%, rgba(57,217,17,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(16,108,207,1) 0%, rgba(56,209,255,1) 49%, rgba(57,217,17,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(16,108,207,1) 0%, rgba(56,209,255,1) 49%, rgba(57,217,17,1) 100%);
+    background: linear-gradient(45deg, rgba(16,108,207,1) 0%, rgba(56,209,255,1) 49%, rgba(57,217,17,1) 100%);
     padding : 10px;
     border-bottom: 3px solid #ffffff;
     box-shadow : 0px 0px 10px rgba(0,0,0,.5);
     margin-bottom: 10px;
+    text-shadow : 0px 1px 3px black;
 }
 header #logo{
     cursor: pointer;
@@ -47,15 +49,14 @@ header #account a{
     text-decoration: underline;
 }
 #R{
-    margin : 10px;
-    margin-left : calc(30% + 30px);
+    margin : 40px;
+    margin-left : calc(30% + 80px);
 }
 #search{
-    border : 1px solid #808080;
-    padding : 10px;
-    border-radius: 6px;
-    box-shadow : 1px 1px 1px rgba(0,0,0,.4);
-    margin: 20px 0px;
+    z-index: 998;
+    position: fixed;
+    width: calc(70% - 110px);
+    margin: 40px 0px;
 }
 #search_type{
     padding: 4px;
@@ -64,38 +65,52 @@ header #account a{
     border-radius: 4px;
 }
 #search_word{
-   padding: 5px 8px;
-   font-size: 16px;
-   border : 1px solid #202020;
-   border-radius: 4px;
-   width: calc(100% - 250px);
+   padding: 10px;
+   font-size: 20px;
+   border: none;
+    background : #e0e0e0;
+   border-bottom : 3px solid #202020;
+   width: calc(100% - 110px);
+    transition: .5s all ease;
+}
+#search_word:focus{
+    box-shadow: inset 1000px 0px 0px 0px white, inset -1000px 0px 0px 0px white, 0px 2px 6px 0px rgba(0,0,0,.5);
+   border-bottom : 3px solid dodgerblue;
+    
 }
 #search_button{
-   background: #ffffff;
-   box-shadow: inset 0px -10px 10px 0 rgba(0,0,0,.2);
-   padding: 5px 18px;
-   font-size: 16px;
-   border : 1px solid #202020;
-   border-radius: 4px;
+    cursor: pointer;
+    color : white;
+   background: dodgerblue;
+   border : none;
+    border-bottom : 3px solid navy;
+   padding: 10px 20px;
+   font-size: 20px;
+    border-radius: 6px;
+}
+#search_button:hover{
+    position: relative;
+    top : 3px;
+    border: none;
 }
 nav{
     position : absolute;
     left : 0%;
    box-sizing: border-box;
-    margin : 10px;
-    padding : 10px 0px;
+    margin : 40px;
+    padding : 15px 0px;
     width : 30%;
-    background : #ffffff;
-    border : 1px solid #808080;
-    border-radius : 6px;
+   border-radius: 8px;
+    background : rgba(255,255,255,.8);
+    box-shadow : 0px 0px 10px 0 rgba(0,0,0,.3);
 }
 nav a{
-   display: block;
-   cursor: pointer;
-   padding : 4px 10px;
+    color: dodgerblue;
+    text-decoration: underline;
+    cursor: pointer;
+    padding : 6px 10px;
 }
 nav a:hover{
-   border-left : 4px solid dodgerblue;
    background: #e0e0e0;
 }
 nav .p{
@@ -104,13 +119,74 @@ nav .p{
    margin-bottom : 10px;
 }
 .box{
-   border: 1px solid gray;
-   padding: 10px;
-   border-radius: 6px;
+    position: relative;
+    top : 110px;
+   padding: 15px;
+   border-radius: 8px;
+    background : rgba(255,255,255,.8);
+    box-shadow : 0px 0px 10px 0 rgba(0,0,0,.3);
 }
 .box aside{
-   font-size: 20px;
+   font-size: 24px;
    border-bottom: 2px solid dodgerblue;
    padding-bottom: 6px;
    margin-bottom: 6px;
+}
+.event{
+    opacity: .9;
+    background : white;
+    cursor: pointer;
+    border: 1px solid gray;
+    margin : 16px 0px 0px 0px;
+    padding : 6px;
+    border-radius: 5px;
+    border-left : 18px solid gray;
+    transition: .18s all ease;
+}
+.event:hover{
+    opacity: 1.0;
+    border-color: black;
+    transform: scale(1.06);
+    box-shadow : 0px 4px 20px rgba(0,0,0,.3);
+}
+.event-name{
+    font-size: 20px;
+    font-weight: 900;
+    border-bottom : 2px solid gray;
+}
+.event-o{
+    float: left;
+    font-size: 35px;
+    background : white;
+    padding-right: 10px;
+    color: limegreen;
+}
+.event-hall{
+    font-size: 16px;
+    display: inline;
+    font-weight: normal;
+}
+.event-artist{
+    font-size: 16px;
+}
+.event-comment{
+    padding: 4px 0px 0px 4px;
+}
+
+.event-date{
+    background: limegreen;
+    color: white;
+    margin : 3px;
+    padding : 3px 16px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: normal;
+    float: right;
+}
+.mini-title{
+    font-weight: 900;
+    padding: 2px 10px;
+    margin : 8px 0px;
+    border-left: 10px solid dodgerblue;
+    border-bottom: 1px solid dodgerblue;
 }

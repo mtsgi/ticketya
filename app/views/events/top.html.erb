@@ -7,18 +7,19 @@
     <div class="box">
         <aside><%= @asideTitle %></aside>
         <% @events.each do |l| %>
-        <div class="event">
+        <div class="event" onclick="location.href='/events/<%= l.id %>'">
             <div class="event-name">
                 <% if( l.available ) %>
-                <span class="event-o">○</span>
+                <span class="event-o">⭕</span>
                 <% else %>
-                <span class="event-o">x</span>
+                <span class="event-o">❌</span>
                 <% end %>
             <%= l.name %>
-            </div>
-            <div class="event-artist"><%= l.artist %></div>
+            <div class="event-date"><%= l.date %></div>
             <div class="event-hall"><%= l.hall %></div>
-            <div class="event-name"><%= l.comment %></div>
+            <div class="event-artist"><%= l.artist %></div>
+            </div>
+            <div class="event-comment"><%= l.comment %></div>
         </div>
         <% end %>
 
