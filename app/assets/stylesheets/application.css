@@ -68,6 +68,7 @@ header #account a{
    font-size: 16px;
    border : 1px solid #202020;
    border-radius: 4px;
+   width: calc(100% - 250px);
 }
 #search_button{
    background: #ffffff;
