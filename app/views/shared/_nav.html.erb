@@ -2,7 +2,15 @@
 <div class="p"><strong>地方</strong>から選ぶ</div>
 <a>北海道</a>
 <div class="p">最近見たチケット</div>
+<% if( cookies[:recentview].present? ) %>
 <a href="/events/<%= cookies[:recentview] %>"><%= Event.find(cookies[:recentview]).name %></a>
+<% else %>
+　なし
+<% end %>
 <div class="p">最近の検索</div>
+<% if( cookies[:recentsearch].present? ) %>
 <a href="/events/search?q=<%= cookies[:recentsearch] %>"><%= cookies[:recentsearch] %></a>
+<% else %>
+　なし
+<% end %>
 </nav>

@@ -5,6 +5,7 @@
     <%= render("shared/search") %>
 
     <div class="box">
+        <a onclick="window.history.back()" class="back">もどる</a>
         <aside><%= @e.name %></aside>
         <%= @e.comment %>
         <div class="mini-title">出演者(アーティスト)</div>
@@ -16,7 +17,11 @@
         <div class="mini-title">場所</div>
         <%= Place.find( @e.place_id ).area %>・<%= Place.find( @e.place_id ).pref %>
         <div class="mini-title">ライブチケット取扱</div>
-        <%= @e.available %>
+        <% if(@e.available) %>
+        取扱中
+        <% else %>
+        現在取り扱いを停止しています
+        <% end %>
         <div class="mini-title">登録日時</div>
         <%= @e.created_at %>
         <aside>チケットの一覧</aside>

@@ -8,7 +8,15 @@ class EventsController < ApplicationController
         cookies[:recentsearch] = params[:q]
         @events = Event.search(params[:q])
         @asideTitle = "「"+params[:q]+"」の検索結果("+@events.count.to_s+"件)"
-        render "top"
+        if( params[:q].length == 0 )
+            render("index") 
+            return
+        end
+        render("top")
+    end
+
+    def index
+        @events = Event.order("created_at")
     end
 
     def area

@@ -51,6 +51,7 @@ header #account a{
 #R{
     margin : 40px;
     margin-left : calc(30% + 80px);
+    margin-bottom: 150px;
 }
 #search{
     z-index: 998;
@@ -68,13 +69,14 @@ header #account a{
    padding: 10px;
    font-size: 20px;
    border: none;
-    background : #e0e0e0;
+    background : #ffffff;
    border-bottom : 3px solid #202020;
    width: calc(100% - 110px);
     transition: .5s all ease;
+    box-shadow: inset 1000px 0px 0px 0px #e0e0e0, inset -1000px 0px 0px 0px #e0e0e0, 0px 0px 12px 0px rgba(0,0,0,.5);
 }
 #search_word:focus{
-    box-shadow: inset 1000px 0px 0px 0px white, inset -1000px 0px 0px 0px white, 0px 2px 6px 0px rgba(0,0,0,.5);
+    box-shadow: inset 0px 0px 0px 0px #e0e0e0, inset 0px 0px 0px 0px #e0e0e0, 0px 2px 6px 0px rgba(0,0,0,.5);
    border-bottom : 3px solid dodgerblue;
     
 }
@@ -149,6 +151,10 @@ nav .p{
     transform: scale(1.06);
     box-shadow : 0px 4px 20px rgba(0,0,0,.3);
 }
+.event:active{
+    transition: .08s all ease;
+    transform: scale(0.96);
+}
 .event-name{
     font-size: 20px;
     font-weight: 900;
@@ -189,4 +195,24 @@ nav .p{
     margin : 8px 0px;
     border-left: 10px solid dodgerblue;
     border-bottom: 1px solid dodgerblue;
+}
+.back{
+    float: right;
+    color: dodgerblue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+footer{
+    background: rgba(255,255,255,.9);
+    padding: 10px;
+    margin : 0px 100px;
+    text-align: center;
+    border-radius: 12px 12px 0px 0px;
+    box-shadow: 0px -2px 8px rgba(0,0,0,.2);
+}
+footer a{
+    color: dodgerblue;
+    cursor: pointer;
+    text-decoration: underline;
+    margin: 0px 20px;
 }

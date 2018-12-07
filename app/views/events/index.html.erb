@@ -5,7 +5,7 @@
     <%= render("shared/search") %>
 
     <div class="box">
-        <aside><%= @asideTitle %></aside>
+        <aside>全てのライブ(<%= @events.count %>件)</aside>
         <% @events.each do |l| %>
         <div class="event" onclick="location.href='/events/<%= l.id %>'">
             <div class="event-name">

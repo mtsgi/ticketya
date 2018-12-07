@@ -1,6 +1,6 @@
 <div id="search">
 <%= form_tag( :search_events, method: :get, :id => "search_form" ) do %>
-    <%= text_field_tag("q", params[:q], :id => "search_word", :placeholder => "検索ワード") %>
-    <%= submit_tag("検索", :id => "search_button") %>
+    <%= text_field_tag("q", params[:q], id: "search_word", placeholder: "検索ワード") %>
+    <%= submit_tag("検索", id: "search_button") %>
 <% end %>
 </div>

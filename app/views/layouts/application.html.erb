@@ -10,6 +10,7 @@
 <header>
 <a id="logo" href="/">ちけっとや</a>　チケット販売システム
 <div id="account">
+<%= link_to("全てのチケットを見る", events_path, q: "") %>
 <a id="account_login">ログイン</a>
 <a id="account_signup">新規登録</a>
 </div>
@@ -17,5 +18,11 @@
 
 <%= yield %>
 
+
+<footer>
+<a href="/">ちけっとやトップ</a>
+<a onclick="window.history.back()">一つ戻る</a>
+<a onclick="window.scrollTo(0,0)">先頭へもどる</a>
+</footer>
 </body>
 </html>
