@@ -1,5 +1,13 @@
 Event.create(name:"BanG Dream! 6th☆LIVE", artist:"Day1：RAISE A SUILEN Brave New World", place_id:17, date:"Fri,7 Dec 2018", comment:"出演：RAISE A SUILEN(Raychell、小原莉子、夏芽、倉知玲鳳、紡木吏佐) ゲスト:伊藤美来(ハロー、ハッピーワールド！ 弦巻こころ役) オープニングアクト：Roselia", available:true, hall:"両国国技館")
+Ticket.create(live_id:1, kind:"砂かぶり席", price:18000, total:50)
+Ticket.create(live_id:1, kind:"一般指定席", price:9500, total:100)
+Ticket.create(live_id:1, kind:"見切れ席", price:8500, total:50)
+
 Event.create(name:"BanG Dream! 6th☆LIVE ", artist:"Day2：Poppin’Party Let's Go! Poppin'Party!", place_id:17, date:"Sat,8 Dec 2018", comment:"出演：Poppin'Party(愛美、大塚紗英、西本りみ、大橋彩香、伊藤彩沙)", available:true, hall:"両国国技館")
+Ticket.create(live_id:2, kind:"砂かぶり席", price:18000, total:50)
+Ticket.create(live_id:2, kind:"一般指定席", price:9500, total:100)
+Ticket.create(live_id:2, kind:"見切れ席", price:8500, total:50)
+
 Event.create(name:"リスアニ！ＬＩＶＥ　２０１９", artist:"ＰＥＮＧＵＩＮ　ＲＥＳＥＡＲＣＨ / Ｍａｙ’ｎ / ＬｉＳＡ", place_id:41, date:"Fri,25 Jan 2019", comment:"毎年恒例の一大音楽フェス『リスアニ！LIVE』。9回目の今年も日本武道館で3日間にわたり開催！", available:true, hall:"日本武道館")
 Event.create(name:"リスアニ！ＬＩＶＥ　２０１９", artist:"アイドルマスター　ＳｉｄｅＭ / 田所あずさ / ＴｒｙＳａｉｌ / 水瀬いのり / やなぎなぎ / ＡＳＣＡ / 三月のパンタシア / ＲｅｏＮａ", place_id:41, date:"Sat,26 Jan 2019", comment:"毎年恒例の一大音楽フェス『リスアニ！LIVE』。9回目の今年も日本武道館で3日間にわたり開催！", available:false, hall:"日本武道館")
 Event.create(name:"リスアニ！ＬＩＶＥ　２０１９", artist:"アイドルマスター　ミリオンライブ！　ミリオンスターズ / ＧＡＲＮｉＤＥＬｉＡ / ＫＯＴＯＫＯ / ＣＨｉＣＯ　ｗｉｔｈ　ＨｏｎｅｙＷｏｒｋｓ / 宮野真守 / ＪＵＮＮＡ / 鈴木みのり / ｈａｌｃａ", place_id:41, date:"Sun,27 Jan 2019", comment:"毎年恒例の一大音楽フェス『リスアニ！LIVE』。9回目の今年も日本武道館で3日間にわたり開催！", available:true, hall:"日本武道館")

@@ -113,7 +113,7 @@ nav a{
     padding : 6px 10px;
 }
 nav a:hover{
-   background: #e0e0e0;
+    color: navy;
 }
 nav .p{
    padding : 2px 8px;
@@ -201,18 +201,4 @@ nav .p{
     color: dodgerblue;
     text-decoration: underline;
     cursor: pointer;
-}
-footer{
-    background: rgba(255,255,255,.9);
-    padding: 10px;
-    margin : 0px 100px;
-    text-align: center;
-    border-radius: 12px 12px 0px 0px;
-    box-shadow: 0px -2px 8px rgba(0,0,0,.2);
-}
-footer a{
-    color: dodgerblue;
-    cursor: pointer;
-    text-decoration: underline;
-    margin: 0px 20px;
 }
