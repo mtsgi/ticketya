@@ -23,10 +23,6 @@ class EventsController < ApplicationController
         @events = Event.order("created_at")
     end
 
-    def area
-        params[:area]
-    end
-
     def show
         cookies[:recentview] = params[:id]
         @e = Event.find(params[:id])
