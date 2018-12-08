@@ -19074,3 +19074,155 @@ Processing by EventsController#show as HTML
   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tickets" WHERE "tickets"."event_id" = ?  [["event_id", 1]]
   Rendered events/show.html.erb within layouts/application (15.8ms)
 Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events/3" for 127.0.0.1 at 2018-12-08 12:16:24 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered shared/_nav.html.erb (2.4ms)
+  Rendered shared/_search.html.erb (0.8ms)
+  [1m[36mPlace Load (0.5ms)[0m  [1mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36mTicket Load (0.1ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tickets" WHERE "tickets"."event_id" = ?  [["event_id", 3]]
+  Rendered events/show.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 42ms (Views: 39.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2018-12-08 12:19:46 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_search.html.erb (0.6ms)
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mTicket Load (0.1ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tickets" WHERE "tickets"."event_id" = ?  [["event_id", 1]]
+  Rendered events/show.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 37ms (Views: 33.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/search?utf8=%E2%9C%93&term=&q=&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2018-12-08 12:19:50 +0900
+Processing by EventsController#search as HTML
+  Parameters: {"utf8"=>"✓", "term"=>"", "q"=>"", "commit"=>"検索"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "events"[0m
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_nav.html.erb (1.4ms)
+  Rendered shared/_search.html.erb (0.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "events"[0m
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events"  ORDER BY created_at
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 34ms (Views: 30.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2018-12-08 12:20:12 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_nav.html.erb (0.9ms)
+  Rendered shared/_search.html.erb (2.3ms)
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = ?  [["event_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "tickets" WHERE "tickets"."event_id" = ?[0m  [["event_id", 1]]
+  Rendered events/show.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 38ms (Views: 34.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/events/search?q=Day1%EF%BC%9ARAISE+A+SUILEN+Brave+New+World&term=artist" for 127.0.0.1 at 2018-12-08 12:20:18 +0900
+Processing by EventsController#search as HTML
+  Parameters: {"q"=>"Day1：RAISE A SUILEN Brave New World", "term"=>"artist"}
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "events" WHERE (artist LIKE '%Day1：RAISE A SUILEN Brave New World%')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_nav.html.erb (1.1ms)
+  Rendered shared/_search.html.erb (3.3ms)
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE (artist LIKE '%Day1：RAISE A SUILEN Brave New World%')  ORDER BY created_at
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (artist LIKE '%Day1：RAISE A SUILEN Brave New World%')[0m
+  Rendered events/top.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 53ms (Views: 49.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/events/search?q=Day1%EF%BC%9ARAISE+A+SUILEN+Brave+New+World&term=artist" for 127.0.0.1 at 2018-12-08 12:24:00 +0900
+Processing by EventsController#search as HTML
+  Parameters: {"q"=>"Day1：RAISE A SUILEN Brave New World", "term"=>"artist"}
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "events" WHERE (artist LIKE '%Day1：RAISE A SUILEN Brave New World%')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_nav.html.erb (1.1ms)
+  Rendered shared/_search.html.erb (0.6ms)
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events" WHERE (artist LIKE '%Day1：RAISE A SUILEN Brave New World%')  ORDER BY created_at
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (artist LIKE '%Day1：RAISE A SUILEN Brave New World%')[0m
+  Rendered events/top.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2018-12-08 12:24:02 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_nav.html.erb (1.3ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mTicket Load (0.3ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = ?  [["event_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tickets" WHERE "tickets"."event_id" = ?[0m  [["event_id", 1]]
+  Rendered events/show.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/events/search?q=Day1%EF%BC%9ARAISE+A+SUILEN+Brave+New+World&term=artist" for 127.0.0.1 at 2018-12-08 12:35:36 +0900
+Processing by EventsController#search as HTML
+  Parameters: {"q"=>"Day1：RAISE A SUILEN Brave New World", "term"=>"artist"}
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "events" WHERE (artist LIKE '%Day1：RAISE A SUILEN Brave New World%')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_nav.html.erb (1.1ms)
+  Rendered shared/_search.html.erb (0.8ms)
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE (artist LIKE '%Day1：RAISE A SUILEN Brave New World%')  ORDER BY created_at
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (artist LIKE '%Day1：RAISE A SUILEN Brave New World%')[0m
+  Rendered events/top.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 38ms (Views: 33.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/search?utf8=%E2%9C%93&term=artist&q=New&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2018-12-08 12:35:44 +0900
+Processing by EventsController#search as HTML
+  Parameters: {"utf8"=>"✓", "term"=>"artist", "q"=>"New", "commit"=>"検索"}
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "events" WHERE (artist LIKE '%New%')
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_nav.html.erb (3.6ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE (artist LIKE '%New%')  ORDER BY created_at
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (artist LIKE '%New%')[0m
+  Rendered events/top.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 29ms (Views: 25.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-08 12:37:26 +0900
+Processing by EventsController#top as HTML
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_nav.html.erb (1.4ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count
+  Rendered events/top.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20181208034213)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "tel" varchar NOT NULL, "password" varchar NOT NULL, "admin" boolean DEFAULT 'f' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20181208034213"]]
+  [1m[36m (3.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tickets_on_event_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tickets_on_event_id' AND type='index'
+[0m
