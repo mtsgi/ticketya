@@ -10,21 +10,33 @@
         <%= @e.comment %>
         <div class="mini-title">出演者(アーティスト)</div>
         <%= @e.artist %>
+        <%= link_to( "同じアーティストを検索", search_events_path(q: @e.artist, term: "artist"), class: "hl" ) %>
         <div class="mini-title">公演日時</div>
         <%= @e.date %>
+        <%= link_to( "同じ日付を検索", search_events_path(q: @e.date, term: "date"), class: "hl" ) %>
         <div class="mini-title">会場</div>
         <%= @e.hall %>
+        <%= link_to( "同じ会場を検索", search_events_path(q: @e.hall, term: "hall"), class: "hl" ) %>
         <div class="mini-title">場所</div>
         <%= Place.find( @e.place_id ).area %>・<%= Place.find( @e.place_id ).pref %>
+        <%= link_to( "同じ県を検索", search_events_path(q: @e.place_id, term: "place_id"), class: "hl" ) %>
         <div class="mini-title">ライブチケット取扱</div>
         <% if(@e.available) %>
-        取扱中
+        取扱中です
         <% else %>
         現在取り扱いを停止しています
         <% end %>
         <div class="mini-title">登録日時</div>
         <%= @e.created_at %>
         <aside>チケットの一覧</aside>
-        ・チケットはありません
+        <% @tickets.each do |t| %>
+        <div class="event">
+            <div class="event-name"><%= t.kind %></div>
+            <div class="event-comment"><%= t.price %>円　総数<%= t.total %>枚</div>
+        </div>
+        <% end %>
+        <% if( @tickets.count == 0 ) %>
+        現在取扱中のチケットはありません。
+        <% end %>
     </div>
 </div>

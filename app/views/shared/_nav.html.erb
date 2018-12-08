@@ -9,7 +9,7 @@
 <% end %>
 <div class="p">最近の検索</div>
 <% if( cookies[:recentsearch].present? ) %>
-<a href="/events/search?q=<%= cookies[:recentsearch] %>"><%= cookies[:recentsearch] %></a>
+<%= link_to( cookies[:recentsearch], search_events_path(q: cookies[:recentsearch]) ) %>
 <% else %>
 　なし
 <% end %>

@@ -1,12 +1,12 @@
 Event.create(name:"BanG Dream! 6th☆LIVE", artist:"Day1：RAISE A SUILEN Brave New World", place_id:17, date:"Fri,7 Dec 2018", comment:"出演：RAISE A SUILEN(Raychell、小原莉子、夏芽、倉知玲鳳、紡木吏佐) ゲスト:伊藤美来(ハロー、ハッピーワールド！ 弦巻こころ役) オープニングアクト：Roselia", available:true, hall:"両国国技館")
-Ticket.create(live_id:1, kind:"砂かぶり席", price:18000, total:50)
-Ticket.create(live_id:1, kind:"一般指定席", price:9500, total:100)
-Ticket.create(live_id:1, kind:"見切れ席", price:8500, total:50)
+Ticket.create(event_id:1, kind:"砂かぶり席", price:18000, total:50)
+Ticket.create(event_id:1, kind:"一般指定席", price:9500, total:100)
+Ticket.create(event_id:1, kind:"見切れ席", price:8500, total:50)
 
 Event.create(name:"BanG Dream! 6th☆LIVE ", artist:"Day2：Poppin’Party Let's Go! Poppin'Party!", place_id:17, date:"Sat,8 Dec 2018", comment:"出演：Poppin'Party(愛美、大塚紗英、西本りみ、大橋彩香、伊藤彩沙)", available:true, hall:"両国国技館")
-Ticket.create(live_id:2, kind:"砂かぶり席", price:18000, total:50)
-Ticket.create(live_id:2, kind:"一般指定席", price:9500, total:100)
-Ticket.create(live_id:2, kind:"見切れ席", price:8500, total:50)
+Ticket.create(event_id:2, kind:"砂かぶり席", price:18000, total:50)
+Ticket.create(event_id:2, kind:"一般指定席", price:9500, total:100)
+Ticket.create(event_id:2, kind:"見切れ席", price:8500, total:50)
 
 Event.create(name:"リスアニ！ＬＩＶＥ　２０１９", artist:"ＰＥＮＧＵＩＮ　ＲＥＳＥＡＲＣＨ / Ｍａｙ’ｎ / ＬｉＳＡ", place_id:41, date:"Fri,25 Jan 2019", comment:"毎年恒例の一大音楽フェス『リスアニ！LIVE』。9回目の今年も日本武道館で3日間にわたり開催！", available:true, hall:"日本武道館")
 Event.create(name:"リスアニ！ＬＩＶＥ　２０１９", artist:"アイドルマスター　ＳｉｄｅＭ / 田所あずさ / ＴｒｙＳａｉｌ / 水瀬いのり / やなぎなぎ / ＡＳＣＡ / 三月のパンタシア / ＲｅｏＮａ", place_id:41, date:"Sat,26 Jan 2019", comment:"毎年恒例の一大音楽フェス『リスアニ！LIVE』。9回目の今年も日本武道館で3日間にわたり開催！", available:false, hall:"日本武道館")
@@ -16,6 +16,8 @@ Event.create(name:"THE IDOLM@STER SideM PRODUCER MEETING 315 SP@RKLING TIME WITH
 Event.create(name:"THE IDOLM@STER SideM PRODUCER MEETING 315 SP@RKLING TIME WITH ALL!!!", artist:"THE IDOLM@STER SideM", place_id:30, date:"Sat,16 Mar 2019", comment:"フィジカル：寺島拓篤（天ヶ瀬冬馬役）、濱健人（木村龍役）、千葉翔也（秋山隼人役）、小林大紀（水嶋咲役）、古畑恵介（橘志狼役）、小松昌平（牙崎漣役）、濱野大輝（円城寺道流役）インテリ：永野由祐（神楽麗役）、山下大輝（猫柳キリオ役）、深町寿成（黒野玄武役）、矢野奨吾（岡村直央役）、伊東健人（硲道夫役）、駒田航（古論クリス役）メンタル：菊池勇成（蒼井悠介役）、増元拓也（信玄誠司役）、中田祐矢（清澄九郎役）、白井悠介（若里春名役）、狩野翔（神谷幸広役）、児玉卓也（卯月巻緒役）", available:true, hall:"幕張メッセ　イベントホール")
 Event.create(name:"THE IDOLM@STER SideM PRODUCER MEETING 315 SP@RKLING TIME WITH ALL!!!", artist:"THE IDOLM@STER SideM", place_id:30, date:"Sun,17 Mar 2019", comment:"フィジカル：寺島拓篤（天ヶ瀬冬馬役）、仲村宗悟（天道輝役）、高塚智人（渡辺みのり役）、野上翔（伊瀬谷四季役）、益山武明（紅井朱雀役）、寺島惇太（大河タケル役）、浦尾岳大（兜大吾役）インテリ：山谷祥生（蒼井享介役）、熊谷健太郎（握野英雄役）、永塚拓馬（冬美旬役）、渡辺紘（榊夏来役）、天崎滉平（東雲荘一郎役）、中島ヨシキ（山下次郎役）、笠間淳（葛之葉雨彦役）メンタル：バレッタ裕（華村翔真役）、中田祐矢（清澄九郎役）、狩野翔（神谷幸広役）、榎木淳弥（舞田類役）、汐谷文康（北村想楽役）、土岐隼一（都築圭役）", available:true, hall:"幕張メッセ　イベントホール")
 Event.create(name:"温泉むすめ YUKEMURI FESTA Vol.17＠羽田空港", artist:"高田憂希 / 高橋花林 / 佐伯伊織", place_id:21, date:"Sun,9 Dec 2018", comment:"高田憂希、高橋花林、佐伯 伊織、髙橋麻里、田中 音緒、稲川英里が登壇予定！羽田空港国際線ターミナル内にある「TIAT SKY HALL」でイベント開催。", available:true, hall:"TIAT SKY HALL")
+Ticket.create(event_id:10, kind:"1部(全席指定)", price:4860, total:100)
+Ticket.create(event_id:10, kind:"2部(全席指定)", price:4860, total:100)
 
 # Event.create(name:"ライブ3", artist:"アーティストB", place_id:1, date:"Sat,1 Dec 2018", comment:"このライブは[日付]に開催される[アーティスト]のライブです。会場は[会場]です。", available:true, hall:"会場B")
 

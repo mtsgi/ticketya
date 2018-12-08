@@ -1,5 +1,6 @@
 <div id="search">
 <%= form_tag( :search_events, method: :get, :id => "search_form" ) do %>
+    <%= select_tag( "term", options_for_select([["公演名", "name"], ["アーティスト", "artist"], ["会場", "hall"], ["公演日時", "date"]], params[:term]), :prompt => "指定しない" , id: "search_term" ) %>
     <%= text_field_tag("q", params[:q], id: "search_word", placeholder: "検索ワード") %>
     <%= submit_tag("検索", id: "search_button") %>
 <% end %>
