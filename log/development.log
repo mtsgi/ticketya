@@ -24272,3 +24272,102 @@ Processing by EventsController#top as HTML
   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count[0m
   Rendered events/top.html.erb within layouts/application (8.5ms)
 Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events/2" for 127.0.0.1 at 2018-12-11 17:37:46 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered shared/_nav.html.erb (0.8ms)
+  Rendered shared/_search.html.erb (0.6ms)
+  [1m[35mPlace Load (0.3ms)[0m  SELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mTicket Load (0.1ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = ?  [["event_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tickets" WHERE "tickets"."event_id" = ?[0m  [["event_id", 2]]
+  Rendered events/show.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 34ms (Views: 31.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tickets/5" for 127.0.0.1 at 2018-12-11 17:37:47 +0900
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mTicket Load (0.2ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.8ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  Rendered tickets/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 17:37:53 +0900
+Processing by EventsController#top as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.3ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count[0m
+  Rendered events/top.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/2" for 127.0.0.1 at 2018-12-11 17:37:58 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = ?  [["event_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tickets" WHERE "tickets"."event_id" = ?[0m  [["event_id", 2]]
+  Rendered events/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tickets/4" for 127.0.0.1 at 2018-12-11 17:38:09 +0900
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mTicket Load (0.1ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.8ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered tickets/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-12-11 17:38:12 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.6ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-4.2.10/lib/rails/templates/rails/info/routes.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 44ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 17:40:40 +0900
+Processing by EventsController#top as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.0ms)
+  Rendered shared/_search.html.erb (0.8ms)
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count[0m
+  Rendered events/top.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/2" for 127.0.0.1 at 2018-12-11 17:40:44 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered shared/_nav.html.erb (0.9ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mTicket Load (0.1ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = ?  [["event_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tickets" WHERE "tickets"."event_id" = ?[0m  [["event_id", 2]]
+  Rendered events/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.6ms)
