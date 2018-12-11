@@ -265,3 +265,79 @@ nav .p{
     border-radius: 6px;
     box-shadow: 0px 1px 2px 0 rgba(0,0,0,.6);
 }
+.new_user{
+    width : 100%;
+    box-sizing: border-box;
+}
+.tfield{
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    background : #ffffff;
+    border-bottom : 3px solid #202020;
+    width : 100%;
+    box-sizing: border-box;
+    transition: .3s all ease;
+    box-shadow: inset 700px 0px 0px 0px #e0e0e0, inset -700px 0px 0px 0px #e0e0e0, 0px 0px 0px 0px rgba(0,0,0,.5);
+    margin : 10px 0px 20px 0px;
+}
+.tfield:focus{
+    box-shadow: inset 0px 0px 0px 0px #e0e0e0, inset 0px 0px 0px 0px #e0e0e0, 0px 2px 6px 0px rgba(0,0,0,.5);
+    border-bottom : 3px solid dodgerblue;
+}
+.button-large{
+    display: block;
+    width: 100%;
+    margin-top : 10px;
+    font-size: 18px;
+    background: dodgerblue;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0px 3px 0px 0px navy; 
+}
+.button-large:hover{
+    position: relative;
+    top : 3px;
+    box-shadow: 0px 0px 0px 0px navy, 0px 0px 0px 3px white;
+}
+.notice{
+    color: dodgerblue;
+    text-shadow: none;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    position: fixed;
+    top : 40px;
+    left: 30%;
+    width: 40%;
+    background: white;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,.8);
+    border : 2px solid dodgerblue;
+    border-radius: 999px;
+}
+#notice-close{
+    cursor: pointer;
+    float: right;
+    color: white;
+    border-radius: 4px;
+    padding: 0px 10px;
+    background: dodgerblue;
+    font-weight: 900;
+}
+#notice-close:hover{
+    opacity: .8;
+}
+.field_with_errors input{
+    border : 3px solid red;
+}
+.error{
+    margin-bottom: 4px;
+}
+.error:before{
+    content: "エラー";
+    color : red;
+    border: 1px solid red;
+    padding: 1px 3px;
+    margin-right: 10px;
+}

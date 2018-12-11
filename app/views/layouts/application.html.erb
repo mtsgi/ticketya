@@ -12,8 +12,14 @@
 <div id="account">
 <%= link_to("全てのチケットを見る", events_path, q: "") %>
 <a id="account_login">ログイン</a>
-<a id="account_signup">新規登録</a>
+<%= link_to("新規登録", new_user_path, id: "account_signup") %>
 </div>
+<% if(flash.notice) %>
+<div class="notice" id="notice">
+<%= flash.notice %>
+<a id="notice-close" onclick="document.getElementById('notice').style.display = 'none'">OK</a>
+</div>
+<% end %>
 </header>
 
 <%= yield %>

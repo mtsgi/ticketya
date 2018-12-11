@@ -21977,3 +21977,2298 @@ Processing by TicketsController#show as HTML
   Rendered shared/_search.html.erb (0.4ms)
   Rendered tickets/show.html.erb within layouts/application (6.6ms)
 Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 15:58:14 +0900
+Processing by EventsController#top as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (8.0ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count
+  Rendered events/top.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 30ms (Views: 26.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/2" for 127.0.0.1 at 2018-12-11 16:02:32 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered shared/_nav.html.erb (1.0ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mTicket Load (0.3ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = ?[0m  [["event_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tickets" WHERE "tickets"."event_id" = ?  [["event_id", 2]]
+  Rendered events/show.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 48ms (Views: 35.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-12-11 16:04:21 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (18.0ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-4.2.10/lib/rails/templates/rails/info/routes.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 60ms (Views: 57.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-12-11 16:05:38 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.3ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-4.2.10/lib/rails/templates/rails/info/routes.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:05:55 +0900
+Processing by UsersController#new as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (7.8ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 35ms (Views: 27.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:11:50 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.2ms)
+  Rendered shared/_search.html.erb (0.6ms)
+  Rendered users/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-9000ec38e7da841ce050565ce3597bddde098c6ea561259a23392ffd4d138e83.css?body=1" for 127.0.0.1 at 2018-12-11 16:11:50 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:11:50 +0900
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:12:18 +0900
+Processing by UsersController#new as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.9ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-9000ec38e7da841ce050565ce3597bddde098c6ea561259a23392ffd4d138e83.css?body=1" for 127.0.0.1 at 2018-12-11 16:12:18 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:12:18 +0900
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:12:29 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.4ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-9000ec38e7da841ce050565ce3597bddde098c6ea561259a23392ffd4d138e83.css?body=1" for 127.0.0.1 at 2018-12-11 16:12:29 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:12:29 +0900
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:13:56 +0900
+Processing by UsersController#new as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.9ms)
+  Rendered shared/_search.html.erb (2.8ms)
+  Rendered users/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 115ms (Views: 113.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-02152d4a0d9d57547632cef716e4fa1d1b58465f4786899d123f319f9a39bc42.css?body=1" for 127.0.0.1 at 2018-12-11 16:13:56 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:13:56 +0900
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:15:56 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.9ms)
+  Rendered shared/_search.html.erb (2.0ms)
+  Rendered users/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-f4795ecb9ad32f4ebe063d5a1bd2207f521491b9b2ff841b388a0ed4f916eb02.css?body=1" for 127.0.0.1 at 2018-12-11 16:15:57 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:15:57 +0900
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:16:09 +0900
+Processing by UsersController#new as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.0ms)
+  Rendered shared/_search.html.erb (0.6ms)
+  Rendered users/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-f4795ecb9ad32f4ebe063d5a1bd2207f521491b9b2ff841b388a0ed4f916eb02.css?body=1" for 127.0.0.1 at 2018-12-11 16:16:09 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:16:09 +0900
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:16:20 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.0ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-f4795ecb9ad32f4ebe063d5a1bd2207f521491b9b2ff841b388a0ed4f916eb02.css?body=1" for 127.0.0.1 at 2018-12-11 16:16:20 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:16:20 +0900
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:18:19 +0900
+Processing by UsersController#new as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.1ms)
+  Rendered shared/_search.html.erb (1.1ms)
+  Rendered users/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-f4795ecb9ad32f4ebe063d5a1bd2207f521491b9b2ff841b388a0ed4f916eb02.css?body=1" for 127.0.0.1 at 2018-12-11 16:18:19 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:18:19 +0900
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:18:40 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (2.6ms)
+  Rendered shared/_search.html.erb (0.7ms)
+  Rendered users/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 41ms (Views: 40.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-c5847e34c0f1700425b5a4fcaf5ba12688fa657daadff3357ab35cfc7f6420f0.css?body=1" for 127.0.0.1 at 2018-12-11 16:18:40 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:18:40 +0900
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:19:36 +0900
+Processing by UsersController#new as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.0ms)
+  Rendered shared/_search.html.erb (0.8ms)
+  Rendered users/new.html.erb within layouts/application (16.3ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `merge' for "管理者権限を有効にする":String):
+    15:             <div class="mini-title">パスワード</div>
+    16:             <%= f.text_field( :password, placeholder: "パスワード",class: "tfield" ) %>
+    17:             <div class="mini-title">管理者</div>
+    18:             <%= f.check_box( :admin, "管理者権限を有効にする" ) %>
+    19:         <% end %>
+    20:     </div>
+    21: </div>
+  app/views/users/new.html.erb:18:in `block in _app_views_users_new_html_erb___27336462704336271_70318719992440'
+  app/views/users/new.html.erb:10:in `_app_views_users_new_html_erb___27336462704336271_70318719992440'
+
+
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (158.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (124.1ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (284.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:20:05 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.4ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-c5847e34c0f1700425b5a4fcaf5ba12688fa657daadff3357ab35cfc7f6420f0.css?body=1" for 127.0.0.1 at 2018-12-11 16:20:05 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:20:05 +0900
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:20:28 +0900
+Processing by UsersController#new as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.2ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-c5847e34c0f1700425b5a4fcaf5ba12688fa657daadff3357ab35cfc7f6420f0.css?body=1" for 127.0.0.1 at 2018-12-11 16:20:28 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:20:28 +0900
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:20:51 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.0ms)
+  Rendered shared/_search.html.erb (0.6ms)
+  Rendered users/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-a7e986db11eed867a9eb3f84aaf8663ae91a5fd0564424c297f748b7f0231871.css?body=1" for 127.0.0.1 at 2018-12-11 16:20:51 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:20:51 +0900
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:21:01 +0900
+Processing by UsersController#new as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.4ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-5f0d8c1fcdb981f812cb7d25219360aa2353fa65eaf0372c0fc6c17dd4ea300a.css?body=1" for 127.0.0.1 at 2018-12-11 16:21:02 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:21:02 +0900
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:21:58 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.8ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-49bf55145944ffce84e504b9b1939339fa68666b57b927031372c904969e169b.css?body=1" for 127.0.0.1 at 2018-12-11 16:21:58 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:21:58 +0900
+
+
+Started GET "/events/2" for 127.0.0.1 at 2018-12-11 16:22:20 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mTicket Load (0.2ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = ?[0m  [["event_id", 2]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "tickets" WHERE "tickets"."event_id" = ?  [["event_id", 2]]
+  Rendered events/show.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 36ms (Views: 31.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tickets/5" for 127.0.0.1 at 2018-12-11 16:22:23 +0900
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTicket Load (0.3ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.0ms)
+  Rendered shared/_search.html.erb (1.9ms)
+  Rendered tickets/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 26ms (Views: 22.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:23:25 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.9ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-49bf55145944ffce84e504b9b1939339fa68666b57b927031372c904969e169b.css?body=1" for 127.0.0.1 at 2018-12-11 16:23:25 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:23:25 +0900
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:23:45 +0900
+Processing by UsersController#new as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.2ms)
+  Rendered shared/_search.html.erb (0.6ms)
+  Rendered users/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-49bf55145944ffce84e504b9b1939339fa68666b57b927031372c904969e169b.css?body=1" for 127.0.0.1 at 2018-12-11 16:23:45 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:23:45 +0900
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:24:07 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.1ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-49bf55145944ffce84e504b9b1939339fa68666b57b927031372c904969e169b.css?body=1" for 127.0.0.1 at 2018-12-11 16:24:07 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:24:07 +0900
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:29:48 +0900
+Processing by UsersController#new as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (3.8ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-bebb09ced337d3466916a6b90c6a66e346cd213ae5bd8109254ba95b8810cdd9.css?body=1" for 127.0.0.1 at 2018-12-11 16:29:48 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:29:48 +0900
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 16:33:02 +0900
+
+AbstractController::ActionNotFound (The action 'create' could not be found for UsersController):
+  actionpack (4.2.10) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.11) lib/rack/etag.rb:24:in `call'
+  rack (1.6.11) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.11) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.11) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.11) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.10) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (109.6ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (248.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:33:35 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (12.7ms)
+  Rendered shared/_search.html.erb (2.2ms)
+  Rendered users/new.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 48ms (Views: 38.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:33:35 +0900
+
+
+Started GET "/assets/application.self-bebb09ced337d3466916a6b90c6a66e346cd213ae5bd8109254ba95b8810cdd9.css?body=1" for 127.0.0.1 at 2018-12-11 16:33:35 +0900
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 16:33:36 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eFABnkFuVw+sMQew31lxRhcPRr21iANHHijtrYzHkBGsFaYlZopjebg8E7yPVHS1cS8NnuSEXPSMw6cGWVripg==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"1"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/users_controller.rb:6:in `create'
+
+
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (133.5ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (111.9ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (249.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 16:33:57 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eFABnkFuVw+sMQew31lxRhcPRr21iANHHijtrYzHkBGsFaYlZopjebg8E7yPVHS1cS8NnuSEXPSMw6cGWVripg==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"1"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/users_controller.rb:6:in `create'
+
+
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (142.0ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (128.8ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (280.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:35:09 +0900
+Processing by UsersController#new as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (3.9ms)
+  Rendered shared/_search.html.erb (0.7ms)
+  Rendered users/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-bebb09ced337d3466916a6b90c6a66e346cd213ae5bd8109254ba95b8810cdd9.css?body=1" for 127.0.0.1 at 2018-12-11 16:35:09 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:35:09 +0900
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 16:35:10 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pMnAE1bKzTIDP4DIp5ODleD+bX/kdftnsiXJombUKBJwjGeocS75RBcylMT3noZmht4mXLV5pNQgzoMJs0lapQ==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"1"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/users_controller.rb:6:in `create'
+
+
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (147.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (136.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (321.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 16:35:18 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pMnAE1bKzTIDP4DIp5ODleD+bX/kdftnsiXJombUKBJwjGeocS75RBcylMT3noZmht4mXLV5pNQgzoMJs0lapQ==", "user"=>{"name"=>"a", "tel"=>"a", "password"=>"[FILTERED]", "admin"=>"1"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/users_controller.rb:6:in `create'
+
+
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (142.1ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (124.9ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (293.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:35:21 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.3ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-bebb09ced337d3466916a6b90c6a66e346cd213ae5bd8109254ba95b8810cdd9.css?body=1" for 127.0.0.1 at 2018-12-11 16:35:21 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:35:21 +0900
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:35:22 +0900
+Processing by UsersController#new as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.8ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-bebb09ced337d3466916a6b90c6a66e346cd213ae5bd8109254ba95b8810cdd9.css?body=1" for 127.0.0.1 at 2018-12-11 16:35:22 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:35:22 +0900
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:35:23 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.4ms)
+  Rendered shared/_search.html.erb (0.7ms)
+  Rendered users/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 16:36:16 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"17N6NtBOdjAZVFhpCgWCp+xS7k5SdGzc8Z3y9wEKNlkD9t2N96pCRg1ZTGVaCIdUinKlbQN4M29jdrhc1JdE7g==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/users_controller.rb:6:in `create'
+
+
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (142.6ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (109.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (265.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 16:39:52 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"17N6NtBOdjAZVFhpCgWCp+xS7k5SdGzc8Z3y9wEKNlkD9t2N96pCRg1ZTGVaCIdUinKlbQN4M29jdrhc1JdE7g==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/users_controller.rb:7:in `create'
+
+
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (138.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (103.9ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (243.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:40:51 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (24.1ms)
+  Rendered shared/_search.html.erb (3.3ms)
+  Rendered users/new.html.erb within layouts/application (78.1ms)
+Completed 200 OK in 355ms (Views: 328.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-bebb09ced337d3466916a6b90c6a66e346cd213ae5bd8109254ba95b8810cdd9.css?body=1" for 127.0.0.1 at 2018-12-11 16:40:51 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:40:52 +0900
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 16:40:52 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T7DeyZd0zKgxf4PcnGDmUviPlFbBaREabXm+ypoECoub9XlysJD43iVyl9DMbeOhnq/fdZBlTqn/kvRhT5l4PA==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("name", "tel", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", ""], ["tel", ""], ["password", ""], ["created_at", "2018-12-11 07:40:52.850764"], ["updated_at", "2018-12-11 07:40:52.850764"]]
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 9ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-12-11 16:40:52 +0900
+
+AbstractController::ActionNotFound (The action 'show' could not be found for UsersController):
+  actionpack (4.2.10) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.11) lib/rack/etag.rb:24:in `call'
+  rack (1.6.11) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.11) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.11) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.11) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.10) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (114.8ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (270.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:41:30 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (9.4ms)
+  Rendered shared/_search.html.erb (0.6ms)
+  Rendered users/new.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 40ms (Views: 32.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-bebb09ced337d3466916a6b90c6a66e346cd213ae5bd8109254ba95b8810cdd9.css?body=1" for 127.0.0.1 at 2018-12-11 16:41:30 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:41:30 +0900
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 16:41:31 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pBAJurneReS7Q2Mr5+9zl1NsCVGJ5+38jT7gkHwJsG5wVa4Bnjpxkq9Odye34nZkNUxCctjrsk8f1ao7qZTC2Q==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("name", "tel", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", ""], ["tel", ""], ["password", ""], ["created_at", "2018-12-11 07:41:31.699325"], ["updated_at", "2018-12-11 07:41:31.699325"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 3.1ms)
+
+NameError (undefined local variable or method `root' for #<UsersController:0x00007fc044c54c50>):
+  app/controllers/users_controller.rb:9:in `create'
+
+
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (134.9ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (116.2ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (260.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:41:40 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (9.6ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 35ms (Views: 28.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-bebb09ced337d3466916a6b90c6a66e346cd213ae5bd8109254ba95b8810cdd9.css?body=1" for 127.0.0.1 at 2018-12-11 16:41:40 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:41:40 +0900
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 16:41:42 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"orPaYGiYa5UVfiKzgo870MH3delq08z0CWMz/Lobylh29n3bT3xf4wFzNr/Sgj4jp9c+yjvfk0ebiHlXb4a47w==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("name", "tel", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", ""], ["tel", ""], ["password", ""], ["created_at", "2018-12-11 07:41:42.115540"], ["updated_at", "2018-12-11 07:41:42.115540"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:41:42 +0900
+Processing by EventsController#top as HTML
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.9ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count
+  Rendered events/top.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 0]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 16:43:46 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"orPaYGiYa5UVfiKzgo870MH3delq08z0CWMz/Lobylh29n3bT3xf4wFzNr/Sgj4jp9c+yjvfk0ebiHlXb4a47w==", "user"=>{"name"=>"なまえ", "tel"=>"でんわ", "password"=>"[FILTERED]", "admin"=>"1"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("name", "tel", "password", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "なまえ"], ["tel", "でんわ"], ["password", "ぱす"], ["admin", "t"], ["created_at", "2018-12-11 07:43:46.545583"], ["updated_at", "2018-12-11 07:43:46.545583"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:43:46 +0900
+Processing by EventsController#top as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.4ms)
+  Rendered shared/_search.html.erb (0.7ms)
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count
+  Rendered events/top.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 1.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-12-11 16:45:16 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.0ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-4.2.10/lib/rails/templates/rails/info/routes.html.erb within layouts/application (35.5ms)
+Completed 200 OK in 70ms (Views: 69.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:45:19 +0900
+Processing by EventsController#top as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.6ms)
+  Rendered shared/_search.html.erb (0.7ms)
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count[0m
+  Rendered events/top.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-bebb09ced337d3466916a6b90c6a66e346cd213ae5bd8109254ba95b8810cdd9.css?body=1" for 127.0.0.1 at 2018-12-11 16:45:19 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:45:19 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:45:22 +0900
+Processing by EventsController#top as HTML
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.9ms)
+  Rendered shared/_search.html.erb (1.0ms)
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count
+  Rendered events/top.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-12-11 16:45:55 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.5ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-4.2.10/lib/rails/templates/rails/info/routes.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:46:20 +0900
+Processing by EventsController#top as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.8ms)
+  Rendered shared/_search.html.erb (0.3ms)
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count[0m
+  Rendered events/top.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-bebb09ced337d3466916a6b90c6a66e346cd213ae5bd8109254ba95b8810cdd9.css?body=1" for 127.0.0.1 at 2018-12-11 16:46:20 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:46:20 +0900
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:46:22 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.7ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:46:24 +0900
+Processing by EventsController#top as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.1ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count[0m
+  Rendered events/top.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 16:46:25 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_search.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 16:46:32 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vtGSK6FEf8+goNULUfT3MkYZMCfYb6vw30wB6RWtJPBqlDWQhqBLubStwQcB+fLBIDl7BIlj9ENNp0tCwDBWRw==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("name", "tel", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", ""], ["tel", ""], ["password", ""], ["created_at", "2018-12-11 07:46:32.300953"], ["updated_at", "2018-12-11 07:46:32.300953"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:46:32 +0900
+Processing by EventsController#top as HTML
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.2ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count
+  Rendered events/top.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:55:09 +0900
+Processing by EventsController#top as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.5ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count[0m
+  Rendered events/top.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 42ms (Views: 39.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-85d64131a9fba070fce4076f01376b4c41b67b2d41bcbf6aedaaa6db14837596.css?body=1" for 127.0.0.1 at 2018-12-11 16:55:09 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:55:09 +0900
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 16:55:12 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vtGSK6FEf8+goNULUfT3MkYZMCfYb6vw30wB6RWtJPBqlDWQhqBLubStwQcB+fLBIDl7BIlj9ENNp0tCwDBWRw==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "tel", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", ""], ["tel", ""], ["password", ""], ["created_at", "2018-12-11 07:55:12.033545"], ["updated_at", "2018-12-11 07:55:12.033545"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:55:12 +0900
+Processing by EventsController#top as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.0ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  [1m[35mEvent Load (1.0ms)[0m  SELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count[0m
+  Rendered events/top.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2018-12-11 16:55:19 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_nav.html.erb (0.8ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mTicket Load (1.1ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = ?  [["event_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tickets" WHERE "tickets"."event_id" = ?[0m  [["event_id", 1]]
+  Rendered events/show.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 57ms (Views: 40.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:55:31 +0900
+Processing by EventsController#top as HTML
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_nav.html.erb (1.1ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count
+  Rendered events/top.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-85d64131a9fba070fce4076f01376b4c41b67b2d41bcbf6aedaaa6db14837596.css?body=1" for 127.0.0.1 at 2018-12-11 16:55:31 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:55:31 +0900
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 16:55:37 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vtGSK6FEf8+goNULUfT3MkYZMCfYb6vw30wB6RWtJPBqlDWQhqBLubStwQcB+fLBIDl7BIlj9ENNp0tCwDBWRw==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "tel", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", ""], ["tel", ""], ["password", ""], ["created_at", "2018-12-11 07:55:37.094999"], ["updated_at", "2018-12-11 07:55:37.094999"]]
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:55:37 +0900
+Processing by EventsController#top as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_nav.html.erb (1.4ms)
+  Rendered shared/_search.html.erb (0.8ms)
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count
+  Rendered events/top.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:55:42 +0900
+Processing by EventsController#top as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_nav.html.erb (1.1ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count[0m
+  Rendered events/top.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-85d64131a9fba070fce4076f01376b4c41b67b2d41bcbf6aedaaa6db14837596.css?body=1" for 127.0.0.1 at 2018-12-11 16:55:43 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:55:43 +0900
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 16:55:46 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vtGSK6FEf8+goNULUfT3MkYZMCfYb6vw30wB6RWtJPBqlDWQhqBLubStwQcB+fLBIDl7BIlj9ENNp0tCwDBWRw==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "users" ("name", "tel", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", ""], ["tel", ""], ["password", ""], ["created_at", "2018-12-11 07:55:46.048896"], ["updated_at", "2018-12-11 07:55:46.048896"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:55:46 +0900
+Processing by EventsController#top as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_nav.html.erb (2.5ms)
+  Rendered shared/_search.html.erb (0.7ms)
+  [1m[35mEvent Load (1.1ms)[0m  SELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count[0m
+  Rendered events/top.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 30ms (Views: 27.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:58:43 +0900
+Processing by EventsController#top as HTML
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_nav.html.erb (1.0ms)
+  Rendered shared/_search.html.erb (0.6ms)
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count
+  Rendered events/top.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-2f1b5350f867d7d4be492d9c0131f743402af19e43a3173166346ef4d8ab726b.css?body=1" for 127.0.0.1 at 2018-12-11 16:58:43 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:58:43 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:59:06 +0900
+Processing by EventsController#top as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_nav.html.erb (1.3ms)
+  Rendered shared/_search.html.erb (1.6ms)
+  [1m[35mEvent Load (1.3ms)[0m  SELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count[0m
+  Rendered events/top.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 36ms (Views: 32.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.self-2f1b5350f867d7d4be492d9c0131f743402af19e43a3173166346ef4d8ab726b.css?body=1" for 127.0.0.1 at 2018-12-11 16:59:07 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:59:07 +0900
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 16:59:08 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vtGSK6FEf8+goNULUfT3MkYZMCfYb6vw30wB6RWtJPBqlDWQhqBLubStwQcB+fLBIDl7BIlj9ENNp0tCwDBWRw==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("name", "tel", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", ""], ["tel", ""], ["password", ""], ["created_at", "2018-12-11 07:59:08.739009"], ["updated_at", "2018-12-11 07:59:08.739009"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:59:08 +0900
+Processing by EventsController#top as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_nav.html.erb (1.0ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count[0m
+  Rendered events/top.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:59:31 +0900
+Processing by EventsController#top as HTML
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_nav.html.erb (0.9ms)
+  Rendered shared/_search.html.erb (2.8ms)
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count
+  Rendered events/top.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 29ms (Views: 24.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self-2f1b5350f867d7d4be492d9c0131f743402af19e43a3173166346ef4d8ab726b.css?body=1" for 127.0.0.1 at 2018-12-11 16:59:31 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:59:31 +0900
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 16:59:36 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vtGSK6FEf8+goNULUfT3MkYZMCfYb6vw30wB6RWtJPBqlDWQhqBLubStwQcB+fLBIDl7BIlj9ENNp0tCwDBWRw==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "tel", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", ""], ["tel", ""], ["password", ""], ["created_at", "2018-12-11 07:59:36.902218"], ["updated_at", "2018-12-11 07:59:36.902218"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:59:36 +0900
+Processing by EventsController#top as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_nav.html.erb (1.4ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count
+  Rendered events/top.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:59:56 +0900
+Processing by EventsController#top as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_nav.html.erb (2.0ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count[0m
+  Rendered events/top.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-2f1b5350f867d7d4be492d9c0131f743402af19e43a3173166346ef4d8ab726b.css?body=1" for 127.0.0.1 at 2018-12-11 16:59:56 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 16:59:56 +0900
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 16:59:57 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vtGSK6FEf8+goNULUfT3MkYZMCfYb6vw30wB6RWtJPBqlDWQhqBLubStwQcB+fLBIDl7BIlj9ENNp0tCwDBWRw==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("name", "tel", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", ""], ["tel", ""], ["password", ""], ["created_at", "2018-12-11 07:59:57.969844"], ["updated_at", "2018-12-11 07:59:57.969844"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:59:57 +0900
+Processing by EventsController#top as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_nav.html.erb (1.5ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count[0m
+  Rendered events/top.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 17:00:10 +0900
+Processing by EventsController#top as HTML
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_nav.html.erb (1.1ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count
+  Rendered events/top.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 31ms (Views: 28.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-2f1b5350f867d7d4be492d9c0131f743402af19e43a3173166346ef4d8ab726b.css?body=1" for 127.0.0.1 at 2018-12-11 17:00:10 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 17:00:10 +0900
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 17:00:11 +0900
+Processing by UsersController#new as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_nav.html.erb (0.9ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 17:00:13 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QO/EBW5nXr3eymvfIP3HwMvmB1RTfjaT1gC6hVRi5ziUqmO+SYNqy8rHf9Nw8MIzrcZMdwJyaSBE6/Augf+Vjw==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("name", "tel", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", ""], ["tel", ""], ["password", ""], ["created_at", "2018-12-11 08:00:13.197388"], ["updated_at", "2018-12-11 08:00:13.197388"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 17:00:13 +0900
+Processing by EventsController#top as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_nav.html.erb (1.0ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count[0m
+  Rendered events/top.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.7ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users"
+
+
+Started GET "/events/2" for 127.0.0.1 at 2018-12-11 17:00:36 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered shared/_nav.html.erb (0.8ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mTicket Load (0.4ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = ?  [["event_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tickets" WHERE "tickets"."event_id" = ?[0m  [["event_id", 2]]
+  Rendered events/show.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tickets/4" for 127.0.0.1 at 2018-12-11 17:00:38 +0900
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mTicket Load (0.2ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.6ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered tickets/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 17:00:41 +0900
+Processing by EventsController#top as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.9ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count[0m
+  Rendered events/top.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 17:01:04 +0900
+Processing by EventsController#top as HTML
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.0ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count
+  Rendered events/top.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-f2717a4a04983257c7bb9507f7a183028cb49ae943fcc1f14b8806f298f4d213.css?body=1" for 127.0.0.1 at 2018-12-11 17:01:04 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 17:01:04 +0900
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 17:01:06 +0900
+Processing by UsersController#new as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (2.6ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-12-11 17:05:02 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-4.2.10/lib/rails/templates/rails/info/routes.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 17:11:06 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (17.0ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 64ms (Views: 57.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-f2717a4a04983257c7bb9507f7a183028cb49ae943fcc1f14b8806f298f4d213.css?body=1" for 127.0.0.1 at 2018-12-11 17:11:07 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 17:11:07 +0900
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 17:11:08 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bl0SYOJqp83hFiKO0fhwOn7cEQbcm9WdKzwUVdm80G66GLXbxY6Tu/UbNoKB9XXJGPxaJY2Xii65117+DCGi2Q==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."tel" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.6ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 43ms (Views: 15.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 17:11:09 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ITFfjdjtVZ1sQzaubQ7se1BIZE2vUkAWH4VA6nMVmfn1dPg2/wlh63hOIqI9A+mINmgvbv5eH6WNbgpBpojrTg==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."tel" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.0ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 22ms (Views: 17.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 17:11:12 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uDer0DGEpGsM5NIP83+JqPlXbzo0WfHNjxaMvc0gEetscgxrFmCQHRjpxgOjcoxbn3ckGWVVrn4d/cYWGL1jXA==", "user"=>{"name"=>"a", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."tel" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.8ms)
+  Rendered shared/_search.html.erb (2.3ms)
+  Rendered users/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 26ms (Views: 18.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 17:11:39 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uDer0DGEpGsM5NIP83+JqPlXbzo0WfHNjxaMvc0gEetscgxrFmCQHRjpxgOjcoxbn3ckGWVVrn4d/cYWGL1jXA==", "user"=>{"name"=>"a", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."tel" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.9ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 28ms (Views: 21.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 17:11:39 +0900
+
+
+Started GET "/assets/application.self-f2717a4a04983257c7bb9507f7a183028cb49ae943fcc1f14b8806f298f4d213.css?body=1" for 127.0.0.1 at 2018-12-11 17:11:39 +0900
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 17:13:11 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uDer0DGEpGsM5NIP83+JqPlXbzo0WfHNjxaMvc0gEetscgxrFmCQHRjpxgOjcoxbn3ckGWVVrn4d/cYWGL1jXA==", "user"=>{"name"=>"a", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."tel" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.0ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 23ms (Views: 19.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 17:13:11 +0900
+
+
+Started GET "/assets/application.self-f2717a4a04983257c7bb9507f7a183028cb49ae943fcc1f14b8806f298f4d213.css?body=1" for 127.0.0.1 at 2018-12-11 17:13:11 +0900
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 17:13:25 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KCrX6gxa84Md3veUMzv7B4gFw379wNiCazix2Azo5MD8b3BRK77H9QnT45hjNv707iWIXazMhzH50/tz2XWWdw==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."tel" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.0ms)
+  Rendered shared/_search.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 22ms (Views: 17.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 17:13:58 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KCrX6gxa84Md3veUMzv7B4gFw379wNiCazix2Azo5MD8b3BRK77H9QnT45hjNv707iWIXazMhzH50/tz2XWWdw==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/mtsgi/rails/ticketya/app/models/user.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+    validates( :tel, presence :true, numericality: true, uni...
+                              ^
+/Users/mtsgi/rails/ticketya/app/models/user.rb:3: Can't assign to true
+...ence :true, numericality: true, uniqueness: true )
+...                              ^):
+  app/models/user.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/user.rb:3: Can't assign to true
+  app/controllers/users_controller.rb:7:in `create'
+
+
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (121.1ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (119.3ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mtsgi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (263.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 17:14:10 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KCrX6gxa84Md3veUMzv7B4gFw379wNiCazix2Azo5MD8b3BRK77H9QnT45hjNv707iWIXazMhzH50/tz2XWWdw==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."tel" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (9.3ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 42ms (Views: 31.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 17:14:10 +0900
+
+
+Started GET "/assets/application.self-f2717a4a04983257c7bb9507f7a183028cb49ae943fcc1f14b8806f298f4d213.css?body=1" for 127.0.0.1 at 2018-12-11 17:14:10 +0900
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 17:15:40 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KCrX6gxa84Md3veUMzv7B4gFw379wNiCazix2Azo5MD8b3BRK77H9QnT45hjNv707iWIXazMhzH50/tz2XWWdw==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."tel" = '' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.8ms)
+  Rendered shared/_search.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 36ms (Views: 27.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-44f7deb2ef2eb12e7126fdd2579ef8a6cd9900f0cd10ae60c847e067dc4a57d9.css?body=1" for 127.0.0.1 at 2018-12-11 17:15:40 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 17:15:40 +0900
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 17:15:59 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KCrX6gxa84Md3veUMzv7B4gFw379wNiCazix2Azo5MD8b3BRK77H9QnT45hjNv707iWIXazMhzH50/tz2XWWdw==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."tel" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.8ms)
+  Rendered shared/_search.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 33ms (Views: 27.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-96d5895c6a3c5967216a5bf8368f9fef6284d177457acef008c9f8fb7c7ba9b2.css?body=1" for 127.0.0.1 at 2018-12-11 17:15:59 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 17:15:59 +0900
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 17:16:06 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KCrX6gxa84Md3veUMzv7B4gFw379wNiCazix2Azo5MD8b3BRK77H9QnT45hjNv707iWIXazMhzH50/tz2XWWdw==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."tel" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.5ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 24ms (Views: 18.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 17:19:14 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KCrX6gxa84Md3veUMzv7B4gFw379wNiCazix2Azo5MD8b3BRK77H9QnT45hjNv707iWIXazMhzH50/tz2XWWdw==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."tel" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.4ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 31ms (Views: 24.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-9fc85854f1b2a7bc09578a8cce61e299fd6ec6ed74d0976623358d30fb066973.css?body=1" for 127.0.0.1 at 2018-12-11 17:19:14 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 17:19:14 +0900
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 17:22:42 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KCrX6gxa84Md3veUMzv7B4gFw379wNiCazix2Azo5MD8b3BRK77H9QnT45hjNv707iWIXazMhzH50/tz2XWWdw==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."tel" = '' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.4ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 33ms (Views: 26.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-9fc85854f1b2a7bc09578a8cce61e299fd6ec6ed74d0976623358d30fb066973.css?body=1" for 127.0.0.1 at 2018-12-11 17:22:42 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 17:22:42 +0900
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 17:25:34 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KCrX6gxa84Md3veUMzv7B4gFw379wNiCazix2Azo5MD8b3BRK77H9QnT45hjNv707iWIXazMhzH50/tz2XWWdw==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."tel" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (8.7ms)
+  Rendered shared/_search.html.erb (1.9ms)
+  Rendered users/new.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 46ms (Views: 31.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.self-9fc85854f1b2a7bc09578a8cce61e299fd6ec6ed74d0976623358d30fb066973.css?body=1" for 127.0.0.1 at 2018-12-11 17:25:34 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 17:25:34 +0900
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 17:25:37 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ySQ0WQxPfl3orf0fRNK+rimTXBcLrvbf7mGt46g4XUQdYZPiK6tKK/yg6RMU37tdT7MXNFqiqWx8iudIfaUv8w==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."tel" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.9ms)
+  Rendered shared/_search.html.erb (1.6ms)
+  Rendered users/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 30ms (Views: 20.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 17:25:45 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TTteD7F7qso6gEhO/AaTiA0ns30aa7KTm3fnUefuOPyZfvm0lp+evC6NXEKsC5Z7awf4Xktn7SAJnK36MnNKSw==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."tel" = '' LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (3.1ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 35ms (Views: 24.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 17:25:53 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+gsWYCV2+/se/1vzec0NM1TCeHxjieEySnBxJMBg7/AuTrHbApLPjQryT/8pwAjAMuIzXzKFvoHYmzuPFf2dRw==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."tel" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.9ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 38ms (Views: 29.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 17:26:11 +0900
+Processing by UsersController#new as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.3ms)
+  Rendered shared/_search.html.erb (0.6ms)
+  Rendered users/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 17:26:16 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.0ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 17:26:55 +0900
+Processing by UsersController#new as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.6ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-9fc85854f1b2a7bc09578a8cce61e299fd6ec6ed74d0976623358d30fb066973.css?body=1" for 127.0.0.1 at 2018-12-11 17:26:55 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 17:26:55 +0900
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 17:27:03 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.8ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-9fc85854f1b2a7bc09578a8cce61e299fd6ec6ed74d0976623358d30fb066973.css?body=1" for 127.0.0.1 at 2018-12-11 17:27:03 +0900
+
+
+Started GET "/assets/application.self-c4e09cff42e27a48b455961c3b5440e1b58d94d2d411a4f5f1a63c7ba98b7625.js?body=1" for 127.0.0.1 at 2018-12-11 17:27:03 +0900
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 17:27:08 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pYbSH0ogjucFLLthWFP1o9i9hlR4mj7Bbm8G324r1chxw3WkbcS6kREhr20IXvBQvp3NdymWYXL8hEx0u7anfw==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."tel" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.9ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 27ms (Views: 18.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 17:27:26 +0900
+Processing by EventsController#top as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.8ms)
+  Rendered shared/_search.html.erb (0.6ms)
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count[0m
+  Rendered events/top.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 17:27:28 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (3.0ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 17:27:30 +0900
+Processing by EventsController#top as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.0ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count[0m
+  Rendered events/top.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 17:27:51 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (10.2ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 48ms (Views: 38.6ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 17:27:57 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jI5bYwCjHkoQAbvij+fJlQjZpefJhURp9kpyVJVCwLZYy/zYJ0cqPAQMr+7f6sxmbvnuxJiJG9pkoTj/QN+yAQ==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "admin"=>"1"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."tel" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.9ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 29ms (Views: 18.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 17:29:35 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"10SUZ2eojG8ixDfEMGLhMMLsy6T+C6krBQchepzM2WgDATPcQEy4GTbJI8hgb+TDpMyAh68H9piX7GvRSVGr3w==", "user"=>{"name"=>"あ", "tel"=>"1234", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."tel" = '1234' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("name", "tel", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "あ"], ["tel", "1234"], ["password", "password"], ["created_at", "2018-12-11 08:29:35.792505"], ["updated_at", "2018-12-11 08:29:35.792505"]]
+  [1m[35m (3.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 17:29:35 +0900
+Processing by EventsController#top as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (3.1ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count[0m
+  Rendered events/top.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 17:29:54 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.1ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+
+
+Started GET "/events/2" for 127.0.0.1 at 2018-12-11 17:32:55 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered shared/_nav.html.erb (0.8ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mTicket Load (0.2ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = ?[0m  [["event_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tickets" WHERE "tickets"."event_id" = ?  [["event_id", 2]]
+  Rendered events/show.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 39ms (Views: 32.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/events/search?utf8=%E2%9C%93&term=&q=&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2018-12-11 17:32:58 +0900
+Processing by EventsController#search as HTML
+  Parameters: {"utf8"=>"✓", "term"=>"", "q"=>"", "commit"=>"検索"}
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "events"[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_search.html.erb (1.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "events"[0m
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"  ORDER BY created_at
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events/3" for 127.0.0.1 at 2018-12-11 17:33:00 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  Rendered shared/_nav.html.erb (0.8ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = ?  [["event_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tickets" WHERE "tickets"."event_id" = ?[0m  [["event_id", 3]]
+  Rendered events/show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/2" for 127.0.0.1 at 2018-12-11 17:33:01 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered shared/_nav.html.erb (1.5ms)
+  Rendered shared/_search.html.erb (0.6ms)
+  [1m[35mPlace Load (0.4ms)[0m  SELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mTicket Load (0.1ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = ?  [["event_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tickets" WHERE "tickets"."event_id" = ?[0m  [["event_id", 2]]
+  Rendered events/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 17:33:14 +0900
+Processing by EventsController#top as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.9ms)
+  Rendered shared/_search.html.erb (0.9ms)
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count
+  Rendered events/top.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 41ms (Views: 39.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/events/2" for 127.0.0.1 at 2018-12-11 17:33:19 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered shared/_nav.html.erb (1.8ms)
+  Rendered shared/_search.html.erb (0.7ms)
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mTicket Load (0.2ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = ?[0m  [["event_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tickets" WHERE "tickets"."event_id" = ?  [["event_id", 2]]
+  Rendered events/show.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 37ms (Views: 34.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tickets/5" for 127.0.0.1 at 2018-12-11 17:33:27 +0900
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTicket Load (0.3ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.9ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  Rendered tickets/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 37ms (Views: 34.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 17:33:31 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-11 17:33:45 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SURfunhR9Q44kf+9D0csaGFwMVbDqoX79hruZLpKOGadAfgBX7XBeCyc67FfSimbB1B6dZKm2khk8aTPb9dK0Q==", "user"=>{"name"=>"", "tel"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "admin"=>"0"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."tel" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (4.0ms)
+  Rendered shared/_search.html.erb (1.0ms)
+  Rendered users/new.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 48ms (Views: 36.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/events/search?utf8=%E2%9C%93&term=&q=6&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2018-12-11 17:33:59 +0900
+Processing by EventsController#search as HTML
+  Parameters: {"utf8"=>"✓", "term"=>"", "q"=>"6", "commit"=>"検索"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (name LIKE '%6%' OR artist LIKE '%6%'OR comment LIKE '%6%')[0m
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.8ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE (name LIKE '%6%' OR artist LIKE '%6%'OR comment LIKE '%6%')  ORDER BY created_at[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "events" WHERE (name LIKE '%6%' OR artist LIKE '%6%'OR comment LIKE '%6%')
+  Rendered events/top.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/events/search?utf8=%E2%9C%93&term=hall&q=&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2018-12-11 17:34:06 +0900
+Processing by EventsController#search as HTML
+  Parameters: {"utf8"=>"✓", "term"=>"hall", "q"=>"", "commit"=>"検索"}
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events"[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "events"[0m
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"  ORDER BY created_at
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events/search?utf8=%E2%9C%93&term=hall&q=%E6%AD%A6%E9%81%93%E9%A4%A8&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2018-12-11 17:34:28 +0900
+Processing by EventsController#search as HTML
+  Parameters: {"utf8"=>"✓", "term"=>"hall", "q"=>"武道館", "commit"=>"検索"}
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "events" WHERE (hall LIKE '%武道館%')
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_nav.html.erb (1.6ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE (hall LIKE '%武道館%')  ORDER BY created_at
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (hall LIKE '%武道館%')[0m
+  Rendered events/top.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 33ms (Views: 30.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 17:34:35 +0900
+Processing by EventsController#top as HTML
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_search.html.erb (0.3ms)
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count
+  Rendered events/top.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/events/3" for 127.0.0.1 at 2018-12-11 17:34:38 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  [1m[36mPlace Load (0.4ms)[0m  [1mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36mTicket Load (0.1ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tickets" WHERE "tickets"."event_id" = ?  [["event_id", 3]]
+  Rendered events/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/events/search?q=2019-01-25&term=date" for 127.0.0.1 at 2018-12-11 17:34:45 +0900
+Processing by EventsController#search as HTML
+  Parameters: {"q"=>"2019-01-25", "term"=>"date"}
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (date LIKE '%2019-01-25%')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered shared/_nav.html.erb (0.8ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE (date LIKE '%2019-01-25%')  ORDER BY created_at[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "events" WHERE (date LIKE '%2019-01-25%')
+  Rendered events/top.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events/search?q=%EF%BC%B0%EF%BC%A5%EF%BC%AE%EF%BC%A7%EF%BC%B5%EF%BC%A9%EF%BC%AE%E3%80%80%EF%BC%B2%EF%BC%A5%EF%BC%B3%EF%BC%A5%EF%BC%A1%EF%BC%B2%EF%BC%A3%EF%BC%A8+%2F+%EF%BC%AD%EF%BD%81%EF%BD%99%E2%80%99%EF%BD%8E+%2F+%EF%BC%AC%EF%BD%89%EF%BC%B3%EF%BC%A1&term=artist" for 127.0.0.1 at 2018-12-11 17:34:48 +0900
+Processing by EventsController#search as HTML
+  Parameters: {"q"=>"ＰＥＮＧＵＩＮ　ＲＥＳＥＡＲＣＨ / Ｍａｙ’ｎ / ＬｉＳＡ", "term"=>"artist"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (artist LIKE '%ＰＥＮＧＵＩＮ　ＲＥＳＥＡＲＣＨ / Ｍａｙ’ｎ / ＬｉＳＡ%')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE (artist LIKE '%ＰＥＮＧＵＩＮ　ＲＥＳＥＡＲＣＨ / Ｍａｙ’ｎ / ＬｉＳＡ%')  ORDER BY created_at[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (artist LIKE '%ＰＥＮＧＵＩＮ　ＲＥＳＥＡＲＣＨ / Ｍａｙ’ｎ / ＬｉＳＡ%')
+  Rendered events/top.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events/search?q=%E6%97%A5%E6%9C%AC%E6%AD%A6%E9%81%93%E9%A4%A8&term=hall" for 127.0.0.1 at 2018-12-11 17:34:50 +0900
+Processing by EventsController#search as HTML
+  Parameters: {"q"=>"日本武道館", "term"=>"hall"}
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (hall LIKE '%日本武道館%')[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered shared/_nav.html.erb (1.3ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE (hall LIKE '%日本武道館%')  ORDER BY created_at[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "events" WHERE (hall LIKE '%日本武道館%')
+  Rendered events/top.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/events/search?q=41&term=place_id" for 127.0.0.1 at 2018-12-11 17:34:55 +0900
+Processing by EventsController#search as HTML
+  Parameters: {"q"=>"41", "term"=>"place_id"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (place_id LIKE '%41%')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered shared/_nav.html.erb (0.9ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE (place_id LIKE '%41%')  ORDER BY created_at[0m
+  [1m[35mCACHE (0.2ms)[0m  SELECT COUNT(*) FROM "events" WHERE (place_id LIKE '%41%')
+  Rendered events/top.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events/3" for 127.0.0.1 at 2018-12-11 17:34:57 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36mTicket Load (0.2ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "tickets" WHERE "tickets"."event_id" = ?  [["event_id", 3]]
+  Rendered events/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-12-11 17:35:00 +0900
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered shared/_nav.html.erb (0.8ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "events"
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY created_at[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "events"
+  Rendered events/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2018-12-11 17:35:01 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered shared/_nav.html.erb (1.1ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mTicket Load (0.2ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tickets" WHERE "tickets"."event_id" = ?  [["event_id", 1]]
+  Rendered events/show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 31ms (Views: 27.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tickets/1" for 127.0.0.1 at 2018-12-11 17:35:09 +0900
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTicket Load (0.2ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_nav.html.erb (1.0ms)
+  Rendered shared/_search.html.erb (0.7ms)
+  Rendered tickets/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 22ms (Views: 18.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tickets/2" for 127.0.0.1 at 2018-12-11 17:35:13 +0900
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTicket Load (0.3ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.7ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_nav.html.erb (2.7ms)
+  Rendered shared/_search.html.erb (0.3ms)
+  Rendered tickets/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 21ms (Views: 16.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 17:35:23 +0900
+Processing by UsersController#new as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_nav.html.erb (0.9ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/events/search?q=41" for 127.0.0.1 at 2018-12-11 17:35:27 +0900
+Processing by EventsController#search as HTML
+  Parameters: {"q"=>"41"}
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "events" WHERE (name LIKE '%41%' OR artist LIKE '%41%'OR comment LIKE '%41%')
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_nav.html.erb (2.5ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE (name LIKE '%41%' OR artist LIKE '%41%'OR comment LIKE '%41%')  ORDER BY created_at
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (name LIKE '%41%' OR artist LIKE '%41%'OR comment LIKE '%41%')[0m
+  Rendered events/top.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2018-12-11 17:35:32 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_nav.html.erb (0.8ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = ?  [["event_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tickets" WHERE "tickets"."event_id" = ?[0m  [["event_id", 1]]
+  Rendered events/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/search?q=17&term=place_id" for 127.0.0.1 at 2018-12-11 17:35:34 +0900
+Processing by EventsController#search as HTML
+  Parameters: {"q"=>"17", "term"=>"place_id"}
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "events" WHERE (place_id LIKE '%17%')
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_nav.html.erb (1.5ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE (place_id LIKE '%17%')  ORDER BY created_at
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (place_id LIKE '%17%')[0m
+  Rendered events/top.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2018-12-11 17:35:58 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_nav.html.erb (1.8ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mTicket Load (0.1ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = ?  [["event_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tickets" WHERE "tickets"."event_id" = ?[0m  [["event_id", 1]]
+  Rendered events/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 21ms (Views: 17.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 17:36:08 +0900
+Processing by EventsController#top as HTML
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_nav.html.erb (0.8ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count
+  Rendered events/top.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-12-11 17:36:12 +0900
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_nav.html.erb (1.0ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "events"
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY created_at[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "events"
+  Rendered events/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/10" for 127.0.0.1 at 2018-12-11 17:36:14 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "10"]]
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1[0m  [["id", 21]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1  [["id", 21]]
+  [1m[36mTicket Load (0.3ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = ?[0m  [["event_id", 10]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tickets" WHERE "tickets"."event_id" = ?  [["event_id", 10]]
+  Rendered events/show.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/events/8" for 127.0.0.1 at 2018-12-11 17:36:20 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "8"]]
+  Rendered shared/_nav.html.erb (1.0ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1[0m  [["id", 30]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1  [["id", 30]]
+  [1m[36mTicket Load (0.3ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = ?[0m  [["event_id", 8]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tickets" WHERE "tickets"."event_id" = ?  [["event_id", 8]]
+  Rendered events/show.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events/search?q=THE+IDOLM%40STER+SideM&term=artist" for 127.0.0.1 at 2018-12-11 17:36:24 +0900
+Processing by EventsController#search as HTML
+  Parameters: {"q"=>"THE IDOLM@STER SideM", "term"=>"artist"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (artist LIKE '%THE IDOLM@STER SideM%')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 8]]
+  Rendered shared/_nav.html.erb (0.9ms)
+  Rendered shared/_search.html.erb (0.5ms)
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE (artist LIKE '%THE IDOLM@STER SideM%')  ORDER BY created_at[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "events" WHERE (artist LIKE '%THE IDOLM@STER SideM%')
+  Rendered events/top.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 17:36:30 +0900
+Processing by EventsController#top as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 8]]
+  Rendered shared/_nav.html.erb (0.8ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count[0m
+  Rendered events/top.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-12-11 17:36:41 +0900
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 8]]
+  Rendered shared/_nav.html.erb (0.9ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events"[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"  ORDER BY created_at
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-11 17:36:46 +0900
+Processing by UsersController#new as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 8]]
+  Rendered shared/_nav.html.erb (1.8ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/8" for 127.0.0.1 at 2018-12-11 17:36:53 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "8"]]
+  Rendered shared/_nav.html.erb (1.8ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1[0m  [["id", 30]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT 1  [["id", 30]]
+  [1m[36mTicket Load (0.1ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = ?[0m  [["event_id", 8]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tickets" WHERE "tickets"."event_id" = ?  [["event_id", 8]]
+  Rendered events/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 17:37:05 +0900
+Processing by EventsController#top as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 8]]
+  Rendered shared/_nav.html.erb (0.8ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events"  ORDER BY created_at LIMIT 5
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events" LIMIT 5) subquery_for_count[0m
+  Rendered events/top.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.7ms)
