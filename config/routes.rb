@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :events do
     collection { get "search" }
   end
+  resources :tickets
 end

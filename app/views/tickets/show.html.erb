@@ -1,0 +1,20 @@
+<%= render("shared/nav") %>
+
+<div id="R">
+
+    <%= render("shared/search") %>
+
+    <div class="box">
+        <a onclick="window.history.back()" class="back">もどる</a>
+        <aside><%= @event.name %></aside>
+        <%= @event.hall %>／<%= @event.artist %>
+        <div class="mini-title"><%= @ticket.kind %></div>
+        <%= @ticket.total %>枚
+        <div class="ticket">
+            <form><%= @ticket.price.to_s(:delimited) %>円
+            <select><option>1枚</option></select>
+            </form>
+            <a class="ticket_buy">購入</a>
+        </div>
+    </div>
+</div>

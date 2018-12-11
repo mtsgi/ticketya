@@ -70,6 +70,13 @@ header #account a{
 	appearance: none;
     width: 140px;
     margin-right: 10px;
+    box-shadow: inset 0px 0px 0px 0px gray;
+    transition: .5s all ease;
+}
+#search_term:hover{
+    transition: .2s all ease;
+    box-shadow: inset 0px -60px 0px 0px #ffffff, 0px 2px 6px 0px rgba(0,0,0,.5);
+    border-bottom: 3px solid dodgerblue;
 }
 #search_word{
    padding: 10px;
@@ -221,4 +228,40 @@ nav .p{
 .box .hl{
     color: dodgerblue;
     text-decoration: underline;
+}
+.box .ticket{
+    font-size: 20px;
+    border: 2px solid dodgerblue;
+    border-radius: 8px;
+    padding: 0px;
+    margin: 20px 0px 10px 0px;
+    background: #ffffff;
+    box-shadow: 0px 1px 4px rgba(0,0,0,.3);
+}
+.box .ticket_buy{
+    cursor: pointer;
+    background: dodgerblue;
+    color: white;
+    float: right;
+    padding: 6px 18px;
+    color: #ffffff;
+    border-radius: 0px 6px 6px 0;
+}
+.box .ticket_buy:hover{
+    opacity: .8;
+}
+.box form{
+    display: inline-block;
+    padding: 6px 10px;
+}
+.box form select{
+    position: relative;
+    top : -2px;
+    border: 2px solid white;
+    background: #e0e0e0;
+    font-size: 16px;
+    padding: 0px 8px;
+    margin: 0px 10px;
+    border-radius: 6px;
+    box-shadow: 0px 1px 2px 0 rgba(0,0,0,.6);
 }

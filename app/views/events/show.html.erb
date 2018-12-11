@@ -30,10 +30,12 @@
         <%= @e.created_at %>
         <aside>チケットの一覧</aside>
         <% @tickets.each do |t| %>
+        <a href="/tickets/<%= t.id %>">
         <div class="event">
             <div class="event-name"><%= t.kind %></div>
-            <div class="event-comment"><%= t.price %>円　総数<%= t.total %>枚</div>
+            <div class="event-comment"><%= t.price.to_s(:delimited) %>円　総数<%= t.total %>枚</div>
         </div>
+        </a>
         <% end %>
         <% if( @tickets.count == 0 ) %>
         現在取扱中のチケットはありません。
