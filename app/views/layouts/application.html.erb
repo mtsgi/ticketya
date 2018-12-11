@@ -11,9 +11,19 @@
 <a id="logo" href="/">ちけっとや</a>　チケット販売システム
 <div id="account">
 <%= link_to("全てのチケットを見る", events_path, q: "") %>
-<a id="account_login">ログイン</a>
-<%= link_to("新規登録", new_user_path, id: "account_signup") %>
+<% if( account ) %>
+  ようこそ<%= User.find_by( tel: account.tel ).name %>さん
+  <%= button_to("ログアウト", :session, method: :delete, id: "logout-button" ) %>
+<% else %>
+  <a id="account_login" onclick="document.getElementById('login-form').classList.toggle('hidden')">ログイン</a>
+  <%= link_to("新規登録", new_user_path, id: "account_signup") %>
+<% end %>
 </div>
+<%= form_tag( :session, id: "login-form", class: "hidden" ) do %>
+    <%= text_field_tag( "tel", "", class: "tfield", placeholder: "電話番号" ) %>
+    <%= password_field_tag( "password", "",  class: "tfield", placeholder: "パスワード" ) %>
+    <%= submit_tag("ログイン", class: "button-large") %>
+<% end %>
 <% if(flash.notice) %>
 <div class="notice" id="notice">
 <%= flash.notice %>

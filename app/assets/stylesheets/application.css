@@ -341,3 +341,32 @@ nav .p{
     padding: 1px 3px;
     margin-right: 10px;
 }
+#login-form{
+    top : 60px;
+    right : 15px;
+    border-radius : 0px 0px 6px 6px;
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,.4);
+    width: 300px;
+    position: fixed;
+    background: white;
+    padding: 10px;
+}
+#login-form input{
+    font-size: 15px;
+    margin: 5px 0;
+}
+.hidden{
+    display: none;
+}
+.button_to{
+    display: inline;
+}
+#logout-button{
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+    text-shadow : 0px 1px 3px black;
+}

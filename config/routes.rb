@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   end
   resources :tickets
   resources :users
+  resource :session, only: [:create, :destroy]
 end
