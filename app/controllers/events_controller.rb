@@ -6,16 +6,28 @@ class EventsController < ApplicationController
 
     def search
         cookies[:recentsearch] = params[:q]
-        @events = Event.search(params[:q], params[:term])
-        if( !params[:term] || params[:term].length == 0 )
-            @asideTitle = "「"+params[:q]+"」の検索結果("+@events.count.to_s+"件)"
-        else
-            @asideTitle = "「"+params[:q]+"」("+params[:term]+")の検索結果("+@events.count.to_s+"件)"
+        @events = Event.search(params[:q], params[:term], params[:date], params[:area])
+
+
+        termQuery = ""
+        termQuery = "「"+params[:q]+"」" if( params[:q].length!=0 )
+
+        termName = ""
+        termName = params[:term] if( params[:term] )
+        if( params[:term]=="name" )
+            termName = "公演名"
+        elsif( params[:term]=="artist" )
+            termName = "アーティスト"
+        elsif( params[:term]=="hall" )
+            termName = "会場"
         end
-        if( params[:q].length == 0 )
-            render("index") 
-            return
-        end
+
+        termDate = ""
+        termDate = "("+params[:date]+")" if( params[:date].present? )
+
+        @asideTitle = "検索結果:"+termName+termQuery+termDate
+        @searchNum = @events.count.to_s
+
         render("top")
     end
 

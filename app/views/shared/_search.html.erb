@@ -1,7 +1,23 @@
+<div id="term_black" class="hidden"></div>
+<%= form_tag( :search_events, method: :get) do %>
 <div id="search">
-<%= form_tag( :search_events, method: :get, :id => "search_form" ) do %>
-    <%= select_tag( "term", options_for_select([["公演名", "name"], ["アーティスト", "artist"], ["会場", "hall"], ["公演日時", "date"]], params[:term]), :prompt => "指定しない" , id: "search_term" ) %>
-    <%= text_field_tag("q", params[:q], id: "search_word", placeholder: "検索ワード") %>
-    <%= submit_tag("検索", id: "search_button") %>
-<% end %>
+    <div id="search_form">
+        <a id="term_toggle" onclick="termToggle()">検索条件</a>
+        <%= text_field_tag("q", params[:q], id: "search_word", placeholder: "検索ワード") %>
+        <%= submit_tag("検索", placeholder: "1999-01-01", id: "search_button") %>
+    </div>
+    <div id="search_option" class="hidden">
+    検索対象：　
+        <%= select_tag( "term", options_for_select([["公演名", "name"], ["アーティスト", "artist"], ["会場", "hall"]], params[:term]), :prompt => "指定しない" , id: "search_term" ) %><br>
+    公演日時：　
+        <%= date_field_tag( "date" , "", id: "search_date" ) %><br>
+    地方を選択：
+        <%= select_tag( "", options_for_select([["北海道"], ["東北"], ["関東"], ["中部"], ["近畿"], ["中国"], ["四国"], ["九州"]], params[:area]), :prompt => "指定しない" , id: "search_area" ) %><br>
+    都道府県：　
+        <%= select_tag( "pref_", options_for_select([], params[:pref]), :prompt => "地方を選択してください" , id: "area_", class: "area-option" ) %>
+        <%= select_tag( "pref_北海道", options_for_select([["北海道"]], params[:pref]), :prompt => "指定しない" , id: "area_北海道", class: "area-option hidden" ) %>
+        <%= select_tag( "pref_東北", options_for_select([["青森県"], ["岩手県"], ["宮城県"], ["秋田県"], ["山形県"], ["福島県"]], params[:pref]), :prompt => "指定しない" , id: "area_東北", class: "area-option hidden" ) %>
+        <%= select_tag( "pref_関東", options_for_select([["茨城県"], ["栃木県"], ["群馬県"], ["埼玉県"], ["千葉県"], ["東京都"], ["神奈川県"]], params[:pref]), :prompt => "指定しない" , id: "area_関東", class: "area-option hidden" ) %>
+    </div>
 </div>
+<% end %>

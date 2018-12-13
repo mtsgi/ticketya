@@ -1,6 +1,8 @@
 <nav>
-<div class="p"><strong>地方</strong>から選ぶ</div>
-<a>北海道</a>
+<div class="p">メニュー</div>
+<a href="/">ちけっとやトップ</a><br>
+<a onclick="window.history.back()">一つ戻る</a><br>
+<a onclick="window.scrollTo(0,0)">先頭へもどる</a>
 <div class="p">最近見たチケット</div>
 <% if( cookies[:recentview].present? ) %>
 <a href="/events/<%= cookies[:recentview] %>"><%= Event.find(cookies[:recentview]).name %></a>
@@ -13,9 +15,4 @@
 <% else %>
 　なし
 <% end %>
-
-<div class="p">メニュー</div>
-<a href="/">ちけっとやトップ</a><br>
-<a onclick="window.history.back()">一つ戻る</a><br>
-<a onclick="window.scrollTo(0,0)">先頭へもどる</a>
 </nav>
