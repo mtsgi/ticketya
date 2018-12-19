@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181208034213) do
+ActiveRecord::Schema.define(version: 20181219074459) do
 
   create_table "events", force: :cascade do |t|
     t.string   "name",                      null: false
@@ -24,6 +24,17 @@ ActiveRecord::Schema.define(version: 20181208034213) do
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end
+
+  create_table "logs", force: :cascade do |t|
+    t.integer  "ticket_id",  null: false
+    t.integer  "user_id",    null: false
+    t.integer  "quantity",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "logs", ["ticket_id"], name: "index_logs_on_ticket_id"
+  add_index "logs", ["user_id"], name: "index_logs_on_user_id"
 
   create_table "places", force: :cascade do |t|
     t.string   "pref",       null: false
