@@ -15,4 +15,12 @@ class UsersController < ApplicationController
     def edit
         @user = User.find(params[:id])
     end
+
+    def show
+        if( !account.present? || account.id.to_s != params[:id] )
+            flash.notice = "アクセスできません"
+            redirect_to( :root )
+        end
+        @user = User.find(params[:id])
+    end
 end

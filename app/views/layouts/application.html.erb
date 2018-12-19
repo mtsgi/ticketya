@@ -10,9 +10,9 @@
 <header>
 <a id="logo" href="/">ちけっとや</a>　チケット販売システム
 <div id="account">
-<%= link_to("全てのチケットを見る", events_path, q: "") %>
+<%= link_to("全てのチケットを見る", events_path, q: "") %>　／　
 <% if( account ) %>
-  ようこそ<%= User.find_by( tel: account.tel ).name %>さん
+  👤ようこそ<%= link_to( User.find_by( tel: account.tel ).name+"さん" , user_path(account) ) %>　／　
   <%= button_to("ログアウト", :session, method: :delete, id: "logout-button" ) %>
 <% else %>
   <a id="account_login" onclick="document.getElementById('login-form').classList.toggle('hidden')">ログイン</a>

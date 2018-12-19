@@ -1,0 +1,22 @@
+<%= render("shared/nav") %>
+
+<div id="R">
+
+    <%= render("shared/search") %>
+
+    <div class="box">
+        <a onclick="window.history.back()" class="back">もどる</a>
+        <aside><%= @user.name %>さんのマイページ</aside>
+        <div class="mini-title">アカウント情報</div>
+        <div class="ticket">
+            <form>お名前：<%= @user.name %></form><a class="ticket_buy">変更</a>
+        </div>
+        <div class="ticket">
+            <form>電話番号：<%= @user.tel %></form><a class="ticket_buy">変更</a>
+        </div>
+        <div class="ticket">
+            <form>パスワードの変更</form><a class="ticket_buy">変更</a>
+        </div>
+        <div class="mini-title">購入履歴</div>
+    </div>
+</div>
