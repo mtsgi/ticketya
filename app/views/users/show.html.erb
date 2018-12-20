@@ -28,7 +28,7 @@
             <% @logs.each do |l| %>
                 <div class="ticket ticket_log">
                     チケット：
-                    <strong><%= Event.find(Ticket.find(l.ticket_id).event_id).name %></strong>
+                    <strong><%= link_to( Event.find(Ticket.find(l.ticket_id).event_id).name, event_path( Ticket.find(l.ticket_id).event_id), class: "hl" ) %></strong>
                      - <%= Ticket.find(l.ticket_id).kind %><br>
                     枚数：<%= l.quantity %>枚　購入者：<%= User.find(l.user_id).name %><br>
                     購入日時：<%= l.created_at %>

@@ -4,6 +4,7 @@ function termToggle() {
 }
 function confToggle() {
     document.getElementById('conf').classList.toggle('hidden');
+    document.getElementById('maisuu').innerHTML = document.getElementById('log_quantity').value;
 }
 function prefOption() {
     //全部のオプションを定義

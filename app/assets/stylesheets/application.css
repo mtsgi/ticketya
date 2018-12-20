@@ -288,11 +288,11 @@ nav .p{
 .box .ticket_buy:hover{
     opacity: .8;
 }
-.box form{
+.box form, .form{
     display: inline-block;
     padding: 6px 10px;
 }
-.box form select{
+.box form select, .form select{
     position: relative;
     top : -2px;
     border: 2px solid white;
@@ -444,4 +444,21 @@ nav .p{
 #R .ticket_log{
     padding: 5px;
     font-size: 16px;
+}
+.buy-button{
+    cursor: pointer;
+    background: dodgerblue;
+    padding: 4px 10px;
+    margin: 10px 5px;
+    color: white;
+    text-align: center;
+    border: 2px solid dodgerblue;
+    font-size: 20px;
+    border-radius: 6px;
+    transition: .3s all ease;
+}
+.buy-button:hover{
+    box-shadow: inset 0px -50px 0px 0px white, 0px 2px 8px 0 rgba(0,0,0,.5);
+    color: dodgerblue;
+    transform: scale(1.2);
 }
