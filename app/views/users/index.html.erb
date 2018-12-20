@@ -1,0 +1,17 @@
+<%= render("shared/nav") %>
+
+<div id="R">
+
+    <%= render("shared/search") %>
+
+    <div class="box">
+        <a onclick="window.history.back()" class="back">もどる</a>
+        <aside>全てのユーザー(管理者用)</aside>
+        <div class="mini-title">アカウント情報(<%= @users.count %>件)</div>
+        <% @users.each do |u| %>
+            <div class="ticket">
+                <form><%= u.name %> <%= link_to( "表示", user_path(u.id), class: "hl") %><br><%= u.tel %></form>
+            </div>
+        <% end %>
+    </div>
+</div>

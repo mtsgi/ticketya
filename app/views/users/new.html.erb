@@ -15,13 +15,13 @@
 
         <%= form_for( @user ) do |f| %>
             <div class="mini-title">お名前</div>
-            <%= f.text_field( :name, placeholder: "お名前",class: "tfield" ) %>
+            <%= f.text_field( :name, placeholder: "お名前", class: "tfield" ) %>
             <div class="mini-title">電話番号</div>
-            <%= f.text_field( :tel, placeholder: "電話番号",class: "tfield" ) %>
+            <%= f.text_field( :tel, placeholder: "電話番号", class: "tfield" ) %>
             <div class="mini-title">パスワード</div>
-            <%= f.password_field( :password, placeholder: "パスワード",class: "tfield" ) %>
+            <%= f.password_field( :password, placeholder: "パスワード", class: "tfield" ) %>
             <div class="mini-title">パスワードの確認</div>
-            <%= f.password_field( :password_confirmation, placeholder: "パスワードの確認",class: "tfield" ) %>
+            <%= f.password_field( :password_confirmation, placeholder: "パスワードの確認", class: "tfield" ) %>
             <div class="mini-title">管理者</div>
             <%= f.check_box( :admin ) %>
             <%= f.label( :admin, "管理者権限を有効にする" ) %>

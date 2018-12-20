@@ -2,6 +2,9 @@ function termToggle() {
     document.getElementById('search_option').classList.toggle('hidden');
     document.getElementById('term_black').classList.toggle('hidden');
 }
+function confToggle() {
+    document.getElementById('conf').classList.toggle('hidden');
+}
 function prefOption() {
     //全部のオプションを定義
     var options = document.getElementsByClassName("area-option");

@@ -14,7 +14,21 @@
             <form><%= @ticket.price.to_s(:delimited) %>円
             <select><option>1枚</option><option>2枚</option><option>3枚</option><option>4枚</option></select>
             </form>
-            <a class="ticket_buy">購入</a>
+            <a class="ticket_buy" onclick="confToggle()">購入</a>
         </div>
+    </div>
+
+    <div id="conf" class="hidden">
+        <div class="mini-title">確認<a class="conf-close" onclick="confToggle()">x</a></div>
+        <% if( !account ) %>
+        ログインしてください。
+        <% else %>
+            内容を確認してください。<br>
+            ユーザー名：<strong><%= account.name %></strong>さん<br>
+            ライブ名：<strong><%= @event.artist %></strong><br>
+            会場名：<strong><%= @event.hall %></strong><br>
+            指定チケット：<strong><%= @ticket.kind %></strong><br>
+            金額：<strong><%= @ticket.price %></strong>円<br>
+        <% end %>
     </div>
 </div>

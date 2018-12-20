@@ -6,7 +6,11 @@
 
     <div class="box">
         <a onclick="window.history.back()" class="back">もどる</a>
-        <aside><%= @user.name %>さんのマイページ</aside>
+        <aside><%= @user.name %>
+        <% if( @user.admin ) %>
+            <span class="flag">管理者</span>
+        <% end %>
+        さんのマイページ</aside>
         <div class="mini-title">アカウント情報</div>
         <div class="ticket">
             <form>お名前：<%= @user.name %></form><a class="ticket_buy">変更</a>
@@ -18,5 +22,20 @@
             <form>パスワードの変更</form><a class="ticket_buy">変更</a>
         </div>
         <div class="mini-title">購入履歴</div>
+        <% if( @logs.count == 0 ) %>
+        購入履歴はありません
+        <% else %>
+            <% @logs.each do |l| %>
+                <div class="ticket ticket_log">
+                    チケット：
+                    <strong><%= Event.find(Ticket.find(l.ticket_id).event_id).name %></strong>
+                     - <%= Ticket.find(l.ticket_id).kind %><br>
+                    枚数：<%= l.quantity %>枚　購入者：<%= User.find(l.user_id).name %><br>
+                    購入日時：<%= l.created_at %>
+                </div>
+            <% end %>
+        <% end %>
+        <div class="mini-title">退会</div>
+        <%= link_to("退会する", :root, class: "hl" ) %>
     </div>
 </div>

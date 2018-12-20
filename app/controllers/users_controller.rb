@@ -3,6 +3,14 @@ class UsersController < ApplicationController
         @user = User.new()
     end
 
+    def index
+        if( !account.present? || !account.admin )
+            flash.notice = "アクセス権限がありません。"
+            redirect_to( :root )
+        end
+        @users = User.order("created_at")
+    end
+
     def create
         @user = User.new(params[:user])
         if( @user.save )
@@ -18,9 +26,12 @@ class UsersController < ApplicationController
 
     def show
         if( !account.present? || account.id.to_s != params[:id] )
-            flash.notice = "アクセスできません"
-            redirect_to( :root )
+            if( !account.admin )
+                flash.notice = "アクセス権限がありません。"
+                redirect_to( :root )
+            end
         end
         @user = User.find(params[:id])
+        @logs = Log.order("created_at")
     end
 end
