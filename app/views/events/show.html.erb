@@ -32,8 +32,16 @@
         <% @tickets.each do |t| %>
         <a href="/logs/new?ticket_id=<%= t.id %>">
         <div class="event">
-            <div class="event-name"><%= t.kind %></div>
-            <div class="event-comment"><%= t.price.to_s(:delimited) %>円　総数<%= t.total %>枚</div>
+            <% @remain = t.total - Log.where( ticket_id: t.id ).sum(:quantity) %>
+            <div class="event-name">
+                <%= t.kind %>
+                <% if( @remain <= 0 ) %>
+                    <span class="ticket-zero">(購入不可)</span>
+                <% elsif( t.total / 5 >  @remain ) %>
+                    <span class="ticket-little">(残りわずか)</span>
+                <% end %>
+            </div>
+            <div class="event-comment"><strong>残り<%= @remain %>枚</strong>／総数<%= t.total %>枚　<%= t.price.to_s(:delimited) %>円</div>
         </div>
         </a>
         <% end %>

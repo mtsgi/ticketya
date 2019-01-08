@@ -5,6 +5,12 @@ function termToggle() {
 function confToggle() {
     document.getElementById('conf').classList.toggle('hidden');
     document.getElementById('maisuu').innerHTML = document.getElementById('log_quantity').value;
+
+    var maisuu = document.getElementById('log_quantity').value;
+    var tanka = document.getElementById('nedan').innerHTML;
+
+    document.getElementById('maisuu').innerHTML = Number(maisuu);
+    document.getElementById('price-sum').innerHTML = Number(maisuu) * Number(tanka);
 }
 function prefOption() {
     //全部のオプションを定義

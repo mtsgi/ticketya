@@ -60,6 +60,7 @@ header #account a{
     margin: 40px 0px;
 }
 #search_option input,#search_option select{
+    font-family: sans-serif;
     box-sizing: border-box;
     border: none;
     border-bottom: 3px solid black;
@@ -461,4 +462,17 @@ nav .p{
     box-shadow: inset 0px -50px 0px 0px white, 0px 2px 8px 0 rgba(0,0,0,.5);
     color: dodgerblue;
     transform: scale(1.2);
+}
+#price-sum{
+    font-size: 24px;
+    font-weight: 900;
+    text-align: right;
+    color: red;
+}
+#price-sum:after{
+    content: "円";
+}
+#price-sum:before{
+    color: black;
+    content: "合計 ";
 }

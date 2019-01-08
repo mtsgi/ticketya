@@ -9,6 +9,13 @@
     <div class="box">
         <a onclick="window.history.back()" class="back">もどる</a>
         <aside><%= @event.name %></aside>
+
+        <% if( @ticket.total - @logs.sum(:quantity) <= 0 ) %>
+
+        このチケットは完売したため購入することはできません。
+
+        <% else %>
+
         <%= @event.artist %>／<%= @event.hall %>
         <div class="mini-title"><%= @ticket.kind %></div>
         残り：<%= @ticket.total - @logs.sum(:quantity) %>枚／総数：<%= @ticket.total %>枚
@@ -23,6 +30,8 @@
             <a class="ticket_buy" onclick="confToggle()">購入</a>
         </div>
         <%= f.text_field( :ticket_id, value: @ticket.id, class: "hidden" ) %>
+
+        <% end %>
     </div>
 
     <div id="conf" class="hidden">
@@ -32,10 +41,12 @@
         <% else %>
             内容を確認してください。<br>
             ユーザー名：<strong><%= account.name %></strong>さん<br>
-            ライブ名：<strong><%= @event.artist %></strong><br>
+            ライブ名：<strong><%= @event.name %></strong><br>
+            アーティスト：<strong><%= @event.artist %></strong><br>
             会場名：<strong><%= @event.hall %></strong><br>
             指定チケット：<strong><%= @ticket.kind %></strong><br>
-            単価：<strong><%= @ticket.price %></strong>円 ✕ 枚数：<strong id="maisuu"></strong>枚<br>
+            単価：<strong id="nedan"><%= @ticket.price %></strong>円 ✕ 枚数：<strong id="maisuu"></strong>枚<br>
+            <div id="price-sum"></div>
             <%= f.submit( class: "button-large" ) %>
         <% end %>
     </div>
