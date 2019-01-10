@@ -36,9 +36,9 @@
             <div class="event-name">
                 <%= t.kind %>
                 <% if( @remain <= 0 ) %>
-                    <span class="ticket-zero">(購入不可)</span>
+                    <span class="ticket-zero">購入不可</span>
                 <% elsif( t.total / 5 >  @remain ) %>
-                    <span class="ticket-little">(残りわずか)</span>
+                    <span class="ticket-little">残りわずか</span>
                 <% end %>
             </div>
             <div class="event-comment"><strong>残り<%= @remain %>枚</strong>／総数<%= t.total %>枚　<%= t.price.to_s(:delimited) %>円</div>

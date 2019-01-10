@@ -13,13 +13,17 @@
         さんのマイページ</aside>
         <div class="mini-title">アカウント情報</div>
         <div class="ticket">
-            <form>お名前：<%= @user.name %></form><a class="ticket_buy">変更</a>
+            <form>お名前：<%= @user.name %></form>
+            <%= link_to("変更", edit_user_path, class: "ticket_buy" ) %>
         </div>
         <div class="ticket">
-            <form>電話番号：<%= @user.tel %></form><a class="ticket_buy">変更</a>
+            <form>電話番号：<%= @user.tel %></form>
+            <%= link_to("変更", edit_user_path, class: "ticket_buy" ) %>
         </div>
         <div class="ticket">
-            <form>パスワードの変更</form><a class="ticket_buy">変更</a>
+            <form>パスワードの変更</form>
+            <%= @user.password %>
+            <%= link_to("変更", edit_user_path, class: "ticket_buy" ) %>
         </div>
         <div class="mini-title">購入履歴</div>
         <% if( @logs.count == 0 ) %>
@@ -36,6 +40,7 @@
             <% end %>
         <% end %>
         <div class="mini-title">退会</div>
-        <%= link_to("退会する", :root, class: "hl" ) %>
+        退会する場合は下のボタンを押下してください<br>
+        <%= button_to("退会する", user_path, method: :delete, data: { confirm: "本当に退会しますか？" }) %>
     </div>
 </div>

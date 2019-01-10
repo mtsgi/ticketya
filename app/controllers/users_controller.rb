@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     def create
         @user = User.new(params[:user])
         if( @user.save )
-            redirect_to( "/", notice: "ユーザー登録が完了しました" )
+            redirect_to( "/", notice: "ユーザー登録が完了しました。" )
         else
             render "new"
         end
@@ -22,6 +22,24 @@ class UsersController < ApplicationController
 
     def edit
         @user = User.find(params[:id])
+    end
+
+    def update
+        @user = User.find(params[:id])
+        @user.assign_attributes(params[:user])
+        if( params[:user][:password] == "" )
+            if( params[:user][:password] == "" && params[:user][:password_confirmation] != "" )
+                redirect_to( edit_user_path, notice: "パスワードの確認が一致しません。" )
+                return
+            end
+            @user.password = User.find(params[:id]).password
+            @user.password_confirmation = User.find(params[:id]).password
+        end
+        if( @user.save )
+            redirect_to( user_path(params[:id]), notice: params[:user] )
+        else
+            render("edit")
+        end
     end
 
     def show
@@ -32,6 +50,12 @@ class UsersController < ApplicationController
             end
         end
         @user = User.find(params[:id])
-        @logs = Log.order("created_at")
+        @logs = Log.order("created_at").where( user_id: @user.id )
+    end
+
+    def destroy
+        @user = User.find(params[:id])
+        @user.destroy()
+        redirect_to( "/", notice: "退会：アカウントを削除しました。" )
     end
 end

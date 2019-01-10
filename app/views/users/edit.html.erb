@@ -1,0 +1,29 @@
+<%= render("shared/nav") %>
+
+<div id="R">
+
+    <%= render("shared/search") %>
+
+    <div class="box">
+        <a onclick="window.history.back()" class="back">もどる</a>
+        <aside>情報の編集</aside>
+        <% if( @user.errors.present? ) %>
+            <% @user.errors.full_messages.each do |message| %>
+            <div class="error"><%= message %></div>
+            <% end %>
+        <% end %>
+
+        <%= form_for( @user ) do |f| %>
+            <div class="mini-title">お名前</div>
+            <%= f.text_field( :name, placeholder: "お名前", class: "tfield" ) %>
+            <div class="mini-title">電話番号</div>
+            <%= f.text_field( :tel, placeholder: "電話番号", class: "tfield" ) %>
+            <div class="mini-title">パスワード</div>
+            変更しない場合は何も入力しないでください。
+            <%= f.password_field( :password, placeholder: "パスワード", class: "tfield" ) %>
+            <div class="mini-title">パスワードの確認</div>
+            <%= f.password_field( :password_confirmation, placeholder: "パスワードの確認", class: "tfield" ) %>
+            <%= f.submit( class: "button-large" ) %>
+        <% end %>
+    </div>
+</div>

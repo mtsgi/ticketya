@@ -13,11 +13,17 @@
         <%= date_field_tag( "date" , "", id: "search_date" ) %><br>
     地方を選択：
         <%= select_tag( "", options_for_select([["北海道"], ["東北"], ["関東"], ["中部"], ["近畿"], ["中国"], ["四国"], ["九州"]], params[:area]), :prompt => "指定しない" , id: "search_area" ) %><br>
-    都道府県：　
+    都道府県：　<!--
         <%= select_tag( "pref_", options_for_select([], params[:pref]), :prompt => "地方を選択してください" , id: "area_", class: "area-option" ) %>
         <%= select_tag( "pref_北海道", options_for_select([["北海道"]], params[:pref]), :prompt => "指定しない" , id: "area_北海道", class: "area-option hidden" ) %>
         <%= select_tag( "pref_東北", options_for_select([["青森県"], ["岩手県"], ["宮城県"], ["秋田県"], ["山形県"], ["福島県"]], params[:pref]), :prompt => "指定しない" , id: "area_東北", class: "area-option hidden" ) %>
         <%= select_tag( "pref_関東", options_for_select([["茨城県"], ["栃木県"], ["群馬県"], ["埼玉県"], ["千葉県"], ["東京都"], ["神奈川県"]], params[:pref]), :prompt => "指定しない" , id: "area_関東", class: "area-option hidden" ) %>
+        -->
+         <% array = [] %>
+        <% Place.order("id").each do |p| %>
+            <% array.push( p ) %>
+        <% end %>
+        <%= select_tag( :pref, options_from_collection_for_select( array, :id, :pref ), prompt: "指定しない" ) %>
     </div>
 </div>
 <% end %>
