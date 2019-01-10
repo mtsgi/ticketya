@@ -13,7 +13,7 @@ class LogsController < ApplicationController
         params[:log][:user_id] = account.id
         
         if( Ticket.find(params[:log][:ticket_id]).total - Log.where( ticket_id: params[:log][:ticket_id] ).sum(:quantity) - params[:log][:quantity].to_i < 0 )
-            redirect_to( root_path(), notice: "購入処理が完了できませんでした。" )
+            redirect_to( root_path(), notice: "枚数が不足しているため購入処理が完了できませんでした。" )
             return
         end
 

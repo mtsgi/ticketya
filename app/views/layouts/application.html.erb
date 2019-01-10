@@ -9,6 +9,9 @@
 <body>
 <header>
 <a id="logo" href="/">ちけっとや</a>　チケット販売システム
+<% if( account && account.admin? ) %>
+<%= link_to("管理ページ", admin_top_index_path, class: "admin-page") %>
+<% end %>
 <div id="account">
 <%= link_to("全てのチケットを見る", events_path, q: "") %>　／　
 <% if( account ) %>

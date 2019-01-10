@@ -44,10 +44,8 @@ class UsersController < ApplicationController
 
     def show
         if( !account.present? || account.id.to_s != params[:id] )
-            if( !account.admin )
-                flash.notice = "アクセス権限がありません。"
-                redirect_to( :root )
-            end
+            flash.notice = "アクセス権限がありません。"
+            redirect_to( :root )
         end
         @user = User.find(params[:id])
         @logs = Log.order("created_at").where( user_id: @user.id )

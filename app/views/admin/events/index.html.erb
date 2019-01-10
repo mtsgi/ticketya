@@ -1,0 +1,27 @@
+<%= render("shared/nav") %>
+
+<div id="R">
+
+    <%= render("shared/search") %>
+
+    <div class="box">
+        <aside>ライブ(<%= @events.count %>件)</aside>
+        ライブの一覧です(管理者用)。
+        <% @events.each do |l| %>
+        <div class="event" onclick="location.href='events/<%= l.id %>'">
+                <% if( l.available ) %>
+                <span class="event-o">⭕</span>
+                <% else %>
+                <span class="event-o">❌</span>
+                <% end %>
+            <%= l.name %>
+            <div class="event-artist"><%= l.hall %></div>
+        </div>
+        <% end %>
+
+        <% if( @events.count == 0 ) %>
+        <div>条件に一致するライブは見つかりませんでした。
+        <% end %>
+
+    </div>
+</div>

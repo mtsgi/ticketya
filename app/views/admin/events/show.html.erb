@@ -1,0 +1,42 @@
+<%= render("shared/nav") %>
+
+<div id="R">
+
+    <%= render("shared/search") %>
+
+    <div class="box">
+        <a onclick="window.history.back()" class="back">もどる</a>
+        <aside><%= @e.name %></aside>
+        管理者用ページです。利用可否の変更およびチケットの追加を行うことができます。
+        <div class="mini-title">現在の利用可否</div>
+        <% if( @e.available ) %>
+        このチケットは購入することができます。
+        <% else %>
+        このチケットは現在購入することができません。
+        <% end %>
+        <div class="mini-title">登録日時</div>
+        <%= @e.created_at %>
+        <aside>チケットの一覧</aside>
+        チケットを追加できます。
+        <%= link_to( "チケットの追加", :root ) %>
+        <% @tickets.each do |t| %>
+        <a href="/logs/new?ticket_id=<%= t.id %>">
+        <div class="event">
+            <% @remain = t.total - Log.where( ticket_id: t.id ).sum(:quantity) %>
+            <div class="event-name">
+                <%= t.kind %>
+                <% if( @remain <= 0 ) %>
+                    <span class="ticket-zero">購入不可</span>
+                <% elsif( t.total / 5 >  @remain ) %>
+                    <span class="ticket-little">残りわずか</span>
+                <% end %>
+            </div>
+            <div class="event-comment"><strong>残り<%= @remain %>枚</strong>／総数<%= t.total %>枚　<%= t.price.to_s(:delimited) %>円</div>
+        </div>
+        </a>
+        <% end %>
+        <% if( @tickets.count == 0 ) %>
+        現在取扱中のチケットはありません。
+        <% end %>
+    </div>
+</div>
