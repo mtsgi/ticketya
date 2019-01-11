@@ -8,17 +8,17 @@
 </head>
 <body>
 <header>
-<a id="logo" href="/">ちけっとや</a>　チケット販売システム
+<a id="logo" href="/">🎫 ちけっとや</a>　チケット販売システム
 <% if( account && account.admin? ) %>
-<%= link_to("管理ページ", admin_top_index_path, class: "admin-page") %>
+<%= link_to("🛠管理ページ", admin_top_index_path, class: "admin-page") %>
 <% end %>
 <div id="account">
-<%= link_to("全てのチケットを見る", events_path, q: "") %>　／　
+<%= link_to("📁全てのチケットを見る", events_path, q: "") %>　／　
 <% if( account ) %>
   👤ようこそ<%= link_to( User.find_by( tel: account.tel ).name+"さん" , user_path(account) ) %>　／　
   <%= button_to("ログアウト", :session, method: :delete, id: "logout-button" ) %>
 <% else %>
-  <a id="account_login" onclick="document.getElementById('login-form').classList.toggle('hidden')">ログイン</a>
+  <a id="account_login" onclick="document.getElementById('login-form').classList.toggle('hidden')">👤ログイン</a>
   <%= link_to("新規登録", new_user_path, id: "account_signup") %>
 <% end %>
 </div>

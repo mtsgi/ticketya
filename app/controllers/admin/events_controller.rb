@@ -8,4 +8,15 @@ class Admin::EventsController < Admin::Base
         @e = Event.find(params[:id])
         @tickets = Ticket.where(event_id: params[:id])
     end
+
+    def edit
+        @e = Event.find(params[:id])
+        if( @e.available )
+            @e.available = false
+        else
+            @e.available = true
+        end
+        @e.save
+        redirect_to( admin_event_path(params[:id]), notice: "利用可否を変更しました。" )
+    end
 end

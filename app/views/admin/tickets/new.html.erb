@@ -1,0 +1,27 @@
+<%= render("shared/nav") %>
+
+<div id="R">
+
+    <%= render("shared/search") %>
+
+    <div class="box">
+        <a onclick="window.history.back()" class="back">もどる</a>
+        <aside>チケットの追加</aside>
+        <div class="ticket ticket_log">
+        <strong>[<%= @e.id %>] <%= @e.name %>(<%= @e.date %>)</strong>にチケットを追加します。
+        </div>
+
+        <%= form_for( @t, url: admin_tickets_path ) do |f| %>
+        <% @t.event_id = params[:event_id] %>
+            <%= f.text_field( :event_id, class: "tfield hidden", readonly: "true" ) %>
+            <div class="mini-title">席種</div>
+            表示される名称です。
+            <%= f.text_field( :kind, placeholder: "席種", class: "tfield" ) %>
+            <div class="mini-title">総数 (枚)</div>
+            <%= f.text_field( :total, placeholder: "総数", class: "tfield" ) %>
+            <div class="mini-title">単価 (円)</div>
+            <%= f.text_field( :price, placeholder: "単価", class: "tfield" ) %>
+            <%= f.submit( class: "button-large", event_id: params[:event_id] ) %>
+        <% end %>
+    </div>
+</div>

@@ -34,6 +34,19 @@ Event.create(name:"温泉むすめ YUKEMURI FESTA Vol.17＠羽田空港", artist
 Ticket.create(event_id:10, kind:"1部(全席指定)", price:4860, total:100)
 Ticket.create(event_id:10, kind:"2部(全席指定)", price:4860, total:100)
 
+Event.create(name:"BanG Dream! 7th☆LIVE", artist:"Roselia", place_id:13, date:"Thu,21 Feb 2019", comment:"■DAY1:Roselia 「Hitze」", available:true, hall:"日本武道館")
+Ticket.create(event_id:11, kind:"プレミアムシート(アリーナ席、グッズ付き)", price:19440, total:100)
+Ticket.create(event_id:11, kind:"指定席", price:9720, total:400)
+
+Event.create(name:"BanG Dream! 7th☆LIVE", artist:"RAISE A SUILEN", place_id:13, date:"Fri,22 Feb 2019", comment:"■DAY2:RAISE A SUILEN 「Genesis」", available:true, hall:"日本武道館")
+Ticket.create(event_id:12, kind:"プレミアムシート(アリーナ席、グッズ付き)", price:19440, total:100)
+Ticket.create(event_id:12, kind:"指定席", price:9720, total:400)
+
+Event.create(name:"BanG Dream! 7th☆LIVE", artist:"Poppin'Party", place_id:13, date:"Sat,23 Feb 2019", comment:"■DAY3:Poppin’Party 「Jumpin' Music♪」", available:true, hall:"日本武道館")
+Ticket.create(event_id:13, kind:"プレミアムシート(アリーナ席、グッズ付き)", price:19440, total:100)
+Ticket.create(event_id:13, kind:"指定席", price:9720, total:400)
+
+
 # Event.create(name:"ライブ3", artist:"アーティストB", place_id:1, date:"Sat,1 Dec 2018", comment:"このライブは[日付]に開催される[アーティスト]のライブです。会場は[会場]です。", available:true, hall:"会場B")
 
 prefs = ["北海道", "青森県", "岩手県", "宮城県", "秋田県", "山形県", "福島県", "茨城県", "栃木県", "群馬県","埼玉県", "千葉県", "東京都", "神奈川県", "新潟県", "富山県", "石川県", "福井県", "山梨県", "長野県","岐阜県", "静岡県", "愛知県", "三重県", "滋賀県", "京都府", "大阪府", "兵庫県", "奈良県", "和歌山県", "鳥取県", "島根県", "岡山県", "広島県", "山口県", "徳島県", "香川県", "愛媛県", "高知県", "福岡県", "佐賀県", "長崎県", "熊本県", "大分県", "宮崎県", "鹿児島県", "沖縄県"]

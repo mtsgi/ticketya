@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     resources :events do
       collection { get "search" }
     end
+    resources :tickets
     resources :logs
     resources :users
     resource :session, only: [:create, :destroy]
