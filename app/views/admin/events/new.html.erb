@@ -1,0 +1,47 @@
+<%= render("shared/nav") %>
+
+<div id="R">
+
+    <%= render("shared/search") %>
+
+    <div class="box">
+        <a onclick="window.history.back()" class="back">もどる</a>
+        <aside>新規ライブイベントの追加</aside>
+        新規ライブを追加します<br>
+        <% if( @e.errors.present? ) %>
+            <% @e.errors.full_messages.each do |message| %>
+            <div class="error"><%= message %></div>
+            <% end %>
+        <% end %>
+
+        <%= form_for( @e, url: admin_events_path ) do |f| %>
+            <div class="mini-title">ライブ名</div>
+            <%= f.text_field( :name, placeholder: "ライブ名", class: "tfield" ) %>
+            
+            <div class="mini-title">アーティスト(出演者)</div>
+            <%= f.text_field( :artist, placeholder: "アーティスト(出演者)", class: "tfield" ) %>
+            
+            <div class="mini-title">都道府県</div>
+            <% array = [] %>
+            <% Place.order("id").each do |p| %>
+            <% array.push( p ) %>
+            <% end %>
+            <%= f.select( :place_id, options_from_collection_for_select( array, :id, :pref ), class: "event-place" ) %>
+            
+            <div class="mini-title">公演日</div>
+            <%= f.date_field( :date, class: "tfield" ) %>
+
+            <div class="mini-title">説明文</div>
+            <%= f.text_area( :comment, placeholder: "説明文(コメント)", class: "tfield tarea" ) %>
+
+            <div class="mini-title">利用可否</div>
+            <%= f.check_box( :available ) %>
+            <%= f.label( :available, "チケットを購入可能状態にする" ) %>
+
+            <div class="mini-title">会場名</div>
+            <%= f.text_field( :hall, placeholder: "会場名", class: "tfield" ) %>
+
+            <%= f.submit( class: "button-large" ) %>
+        <% end %>
+    </div>
+</div>

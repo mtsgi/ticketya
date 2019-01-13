@@ -10,7 +10,7 @@ class Admin::TicketsController < Admin::Base
         if( @ticket.save )
             redirect_to( admin_event_path(@ticket.event_id), notice: "チケットを追加しました" )
         else
-            render( text: "チケットの追加に失敗しました。やり直してください。" )
+            redirect_to( admin_event_path(@ticket.event_id), notice: "チケットの入力内容が不正です。もう一度試してください。" )
         end
     end
 end

@@ -1,4 +1,11 @@
 class Event < ActiveRecord::Base
+    validates( :name, presence: true )
+    validates( :artist, presence: true )
+    validates( :place_id, presence: true )
+    validates( :date, presence: true )
+    validates( :comment, presence: true )
+    validates( :hall, presence: true )
+
     class << self
         def search(q, term, date, area)
             rel = order("created_at")

@@ -370,7 +370,7 @@ nav .p{
 #notice-close:hover{
     opacity: .8;
 }
-.field_with_errors input{
+.field_with_errors input, .field_with_errors select, .field_with_errors textarea{
     border : 3px solid red;
 }
 .error{
@@ -518,7 +518,20 @@ nav .p{
     border: 2px solid navy;
     border-radius: 7px;
 }
-.new_user, .edit_user, .new_ticket{
+.new_user, .edit_user, .new_ticket, .new_event{
     width : 100%;
     box-sizing: border-box;
+}
+#event_place_id{
+    font-size: 20px;
+    margin: 10px 0px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 3px solid black;
+    border-radius: 0px;
+    box-shadow: none;
+}
+.tarea{
+    height : 160px;
 }

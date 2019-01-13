@@ -59,11 +59,11 @@ i = 0
     end
 end
 
-Log.create(ticket_id:1, user_id:1, quantity:1)
-Log.create(ticket_id:2, user_id:1, quantity:2)
-Log.create(ticket_id:3, user_id:1, quantity:3)
+Log.create(ticket_id:1, user_id:2, quantity:1)
 Log.create(ticket_id:2, user_id:2, quantity:2)
-Log.create(ticket_id:1, user_id:2, quantity:5)
+Log.create(ticket_id:3, user_id:2, quantity:3)
+Log.create(ticket_id:5, user_id:2, quantity:2)
+Log.create(ticket_id:8, user_id:2, quantity:5)
 
 User.create(name:"admin", tel:"9999", password: "pass", admin:true)
 User.create(name:"太郎", tel:"1234", password: "pass", admin:false)

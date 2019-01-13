@@ -19,7 +19,7 @@
         <%= select_tag( "pref_東北", options_for_select([["青森県"], ["岩手県"], ["宮城県"], ["秋田県"], ["山形県"], ["福島県"]], params[:pref]), :prompt => "指定しない" , id: "area_東北", class: "area-option hidden" ) %>
         <%= select_tag( "pref_関東", options_for_select([["茨城県"], ["栃木県"], ["群馬県"], ["埼玉県"], ["千葉県"], ["東京都"], ["神奈川県"]], params[:pref]), :prompt => "指定しない" , id: "area_関東", class: "area-option hidden" ) %>
         -->
-         <% array = [] %>
+        <% array = [] %>
         <% Place.order("id").each do |p| %>
             <% array.push( p ) %>
         <% end %>
