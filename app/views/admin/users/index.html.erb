@@ -1,0 +1,18 @@
+<%= render("shared/nav") %>
+
+<div id="R">
+
+    <%= render("shared/search") %>
+
+    <div class="box">
+        <a onclick="window.history.back()" class="back">もどる</a>
+        <aside>ユーザー一覧(<%= @users.count %>件)</aside>
+        全ユーザーの一覧です(管理者用)。
+        <% @users.each do |u| %>
+        <div class="ticket ticket_log">
+            👤ユーザー名：<%= u.name %>／📞電話番号：<%= u.tel %>
+            <br>🕒登録日時：<%= u.created_at %>
+        </div>
+        <% end %>
+    </div>
+</div>

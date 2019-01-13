@@ -5,6 +5,7 @@
     <%= render("shared/search") %>
 
     <div class="box">
+        <a onclick="window.history.back()" class="back">もどる</a>
         <aside>ライブ(<%= @events.count %>件)</aside>
         ライブの一覧です(管理者用)。
         <%= link_to( "ライブの追加", new_admin_event_path, class: "add-button" ) %>

@@ -1,0 +1,26 @@
+<%= render("shared/nav") %>
+
+<div id="R">
+
+    <%= render("shared/search") %>
+
+    <div class="box">
+        <a onclick="window.history.back()" class="back">もどる</a>
+        <aside>全購入履歴(<%= @logs.count %>件)</aside>
+        購入履歴の一覧です(管理者用)。
+        <% @sum = 0 %>
+        <% @logs.each do |l| %>
+        <div class="ticket ticket_log">
+            <% @sum += Ticket.find(l.ticket_id).price %>
+            👤ユーザー：<%= l.user_id %>／
+            📑枚数：<%= l.quantity %>枚<br>
+            <strong>🎫<%= Event.find(Ticket.find(l.ticket_id).event_id).name %>
+            ／💺<%= Ticket.find(l.ticket_id).kind %>
+            (<%= Ticket.find(l.ticket_id).price %>円)</strong><br>
+            🕒<%= l.created_at %>
+        </div>
+        <% end %>
+        合計売上：<%= @sum.to_s(:delimited) %>円
+
+    </div>
+</div>
