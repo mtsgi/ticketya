@@ -50,7 +50,7 @@
             指定チケット：<strong><%= @ticket.kind %></strong><br>
             単価：<strong id="nedan"><%= @ticket.price %></strong>円 ✕ 枚数：<strong id="maisuu"></strong>枚<br>
             <div id="price-sum"></div>
-            <%= f.submit( class: "button-large" ) %>
+            <%= f.submit( "購入を確定する", class: "button-large" ) %>
         <% end %>
     </div>
 

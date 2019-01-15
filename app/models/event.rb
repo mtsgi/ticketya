@@ -1,10 +1,10 @@
 class Event < ActiveRecord::Base
-    validates( :name, presence: true )
-    validates( :artist, presence: true )
-    validates( :place_id, presence: true )
-    validates( :date, presence: true )
-    validates( :comment, presence: true )
-    validates( :hall, presence: true )
+    validates( :name, presence: { message: "ライブ名を入力してください。" } )
+    validates( :artist, presence: { message: "アーティスト名を入力してください。" } )
+    validates( :place_id, presence: { message: "都道府県を入力してください。" } )
+    validates( :date, presence: { message: "日付を入力してください。" } )
+    validates( :comment, presence: { message: "コメント(説明文)を入力してください。" } )
+    validates( :hall, presence: { message: "会場を入力してください。" } )
 
     class << self
         def search(q, term, date, area)

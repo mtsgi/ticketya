@@ -21,7 +21,7 @@
             <%= f.text_field( :total, placeholder: "総数", class: "tfield" ) %>
             <div class="mini-title">単価 (円)</div>
             <%= f.text_field( :price, placeholder: "単価", class: "tfield" ) %>
-            <%= f.submit( class: "button-large", event_id: params[:event_id] ) %>
+            <%= f.submit( "チケットを追加する", class: "button-large", event_id: params[:event_id] ) %>
         <% end %>
     </div>
 </div>
