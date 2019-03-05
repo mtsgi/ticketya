@@ -24,7 +24,7 @@
             <div class="mini-title">都道府県</div>
             <% array = [] %>
             <% Place.order("id").each do |p| %>
-            <% array.push( p ) %>
+                <% array.push( p ) %>
             <% end %>
             <%= f.select( :place_id, options_from_collection_for_select( array, :id, :pref ), class: "event-place" ) %>
             

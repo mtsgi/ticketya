@@ -7,6 +7,9 @@
     <div class="box">
         <a onclick="window.history.back()" class="back">もどる</a>
         <aside><%= @e.name %></aside>
+
+        <% if( @e.available ) %>
+
         <%= @e.comment %>
         <div class="mini-title">出演者(アーティスト)</div>
         👥<%= @e.artist %>
@@ -48,5 +51,16 @@
         <% if( @tickets.count == 0 ) %>
         現在取扱中のチケットはありません。
         <% end %>
+
+        <% else %>
+
+        このライブは利用不可状態です。
+        <br>詳細は管理者にお問い合わせください。
+
+        <% end %>
     </div>
 </div>
+
+<% if( account && account.admin ) %>
+    <%= link_to( "編集(管理者権限)", admin_event_path( @e.id ), class: "admin_update" ) %>
+<% end %>

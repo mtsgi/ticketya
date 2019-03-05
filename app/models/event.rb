@@ -12,6 +12,8 @@ class Event < ActiveRecord::Base
                 #検索対象による分岐
                 if( !term.present? )
                     rel = rel.where("name LIKE ? OR artist LIKE ?OR hall LIKE ?", "%#{q}%", "%#{q}%", "%#{q}%")
+                elsif( term == "area" )
+                    rel = rel.where(place_id: Place.where("area LIKE ?", "%#{q}%"))
                 else
                     rel = rel.where( term + " LIKE ?", "%#{q}%")
                 end

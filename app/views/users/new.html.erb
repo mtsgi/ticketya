@@ -8,8 +8,10 @@
         <a onclick="window.history.back()" class="back">もどる</a>
         <aside>新規登録</aside>
         <% if( @user.errors.present? ) %>
-            <% @user.errors.full_messages.each do |message| %>
-            <div class="error"><%= message %></div>
+            <% @user.errors.messages.each do |message| %>
+                <% message[1].each do |m| %>
+                    <div class="error"><%= m %></div>
+                <% end %>
             <% end %>
         <% end %>
 

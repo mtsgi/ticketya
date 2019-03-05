@@ -13,19 +13,25 @@ class EventsController < ApplicationController
         termQuery = "「"+params[:q]+"」" if( params[:q].length!=0 )
 
         termName = ""
-        termName = params[:term] if( params[:term] )
         if( params[:term]=="name" )
             termName = "公演名"
         elsif( params[:term]=="artist" )
             termName = "アーティスト"
         elsif( params[:term]=="hall" )
             termName = "会場"
+        elsif( params[:term]=="place_id" )
+            termName = "都道府県「"
+            termQuery = Place.find(params[:q]).pref + "」"
+        elsif( params[:term]=="area" )
+            termName = "地方「"
+            termQuery = params[:q] + "」"
         end
 
         termDate = ""
         termDate = "("+params[:date]+")" if( params[:date].present? )
 
         @asideTitle = "検索結果:"+termName+termQuery+termDate
+        #@asideTitle = Place.find(params[:q]).pref if( params[:term] = "place_id" )
         @searchNum = @events.count.to_s
 
         render("top")

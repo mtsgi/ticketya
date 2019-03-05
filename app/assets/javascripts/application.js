@@ -12,6 +12,12 @@ function confToggle() {
     document.getElementById('maisuu').innerHTML = Number(maisuu);
     document.getElementById('price-sum').innerHTML = Number(maisuu) * Number(tanka);
 }
+function areaToggle(){
+    document.getElementById("popup_area").classList.toggle('hidden');
+}
+function prefToggle(){
+    document.getElementById("popup_pref").classList.toggle('hidden');
+}
 function prefOption() {
     //全部のオプションを定義
     var options = document.getElementsByClassName("area-option");

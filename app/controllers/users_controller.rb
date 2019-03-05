@@ -37,7 +37,7 @@ class UsersController < ApplicationController
             @user.password_confirmation = User.find(params[:id]).password
         end
         if( @user.save )
-            redirect_to( user_path(params[:id]), notice: params[:user] )
+            redirect_to( user_path(params[:id]), notice: "ユーザー情報の編集を完了しました。" )
         else
             render("edit")
         end

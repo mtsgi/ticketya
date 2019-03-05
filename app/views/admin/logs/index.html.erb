@@ -11,8 +11,15 @@
         <% @sum = 0 %>
         <% @logs.each do |l| %>
         <div class="ticket ticket_log">
-            <% @sum += Ticket.find(l.ticket_id).price %>
-            👤ユーザー：<%= l.user_id %>／
+            <% @sum += ( Ticket.find(l.ticket_id).price * l.quantity ) %>
+            <% @user = User.find_by(id: l.user_id) %>
+            👤ユーザー：
+            <% if( @user ) %>
+                <%= link_to( @user.name, admin_user_path(@user.id), class: "hl" ) %>
+            <% else %>
+                削除されたユーザー
+            <% end %>
+            ／
             📑枚数：<%= l.quantity %>枚<br>
             <strong>🎫<%= Event.find(Ticket.find(l.ticket_id).event_id).name %>
             ／💺<%= Ticket.find(l.ticket_id).kind %>

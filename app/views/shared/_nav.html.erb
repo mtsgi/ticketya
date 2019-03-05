@@ -1,15 +1,16 @@
 <nav>
 <div class="p">メニュー</div>
-<a href="/">ちけっとやトップ</a>
-<a onclick="window.history.back()">一つ戻る</a>
-<a onclick="window.scrollTo(0,0)">先頭へもどる</a>
+<a href="/">🏠ちけっとやトップ</a>
+<a onclick="location.reload(true)">🔃最新の情報に更新</a>
+<a onclick="window.history.back()">👈一つ戻る</a>
+<a onclick="window.scrollTo(0,0)">🔝先頭へもどる</a>
 <div class="p">最近見たチケット</div>
-<% if( cookies[:recentview].present? ) %>
-<a href="/events/<%= cookies[:recentview] %>"><%= Event.find(cookies[:recentview]).name %></a>
+<% if( cookies[:recentview].present? && Event.find_by(id: cookies[:recentview]) ) %>
+<a href="/events/<%= cookies[:recentview] %>">🌱<%= Event.find_by(id: cookies[:recentview]).name %></a>
 <% else %>
 　なし
 <% end %>
-<div class="p">最近の検索</div>
+<div class="p">🔍最近の検索</div>
 <% if( cookies[:recentsearch].present? ) %>
 <%= link_to( cookies[:recentsearch], search_events_path(q: cookies[:recentsearch]) ) %>
 <% else %>

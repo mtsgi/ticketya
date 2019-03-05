@@ -1,0 +1,39 @@
+<%= render("shared/nav") %>
+
+<div id="R">
+
+    <%= render("shared/search") %>
+
+    <div class="box">
+        <a onclick="window.history.back()" class="back">もどる</a>
+        <aside>アカウント情報</aside>
+        管理者用のページです。ユーザーの情報を確認できます。
+        <div class="mini-title">アカウント情報</div>
+        <div class="ticket">
+            <form>お名前：<%= @user.name %></form>
+        </div>
+        <div class="ticket">
+            <form>電話番号：<%= @user.tel %></form>
+        </div>
+        <div class="ticket">
+            <form>登録日時：<%= @user.created_at %></form>
+        </div>
+        <div class="ticket">
+            <form>管理者フラグ：<%= @user.admin %></form>
+        </div>
+        <div class="mini-title">購入履歴</div>
+        <% if( @logs.count == 0 ) %>
+        購入履歴はありません
+        <% else %>
+            <% @logs.each do |l| %>
+                <div class="ticket ticket_log">
+                    チケット：
+                    <strong><%= link_to( Event.find(Ticket.find(l.ticket_id).event_id).name, event_path( Ticket.find(l.ticket_id).event_id), class: "hl" ) %></strong>
+                     - <%= Ticket.find(l.ticket_id).kind %><br>
+                    枚数：<%= l.quantity %>枚　購入者：<%= User.find(l.user_id).name %>　小計：<%= (Ticket.find(l.ticket_id).price * l.quantity).to_s(:delimited) %>円<br>
+                    購入日時：<%= l.created_at %>
+                </div>
+            <% end %>
+        <% end %>
+    </div>
+</div>

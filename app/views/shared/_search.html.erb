@@ -12,8 +12,14 @@
     公演日時：　
         <%= date_field_tag( "date" , "", id: "search_date" ) %><br>
     地方を選択：
-        <%= select_tag( "", options_for_select([["北海道"], ["東北"], ["関東"], ["中部"], ["近畿"], ["中国"], ["四国"], ["九州"]], params[:area]), :prompt => "指定しない" , id: "search_area" ) %><br>
-    都道府県：　<!--
+        <a class="search_link" onclick="areaToggle()">
+        <% if(params[:term]&&params[:term]=="area") %>🔴<% end %>地方を選択
+        </a>
+        <% select_tag( "", options_for_select([["北海道"], ["東北"], ["関東"], ["中部"], ["近畿"], ["中国"], ["四国"], ["九州"]], params[:area]), :prompt => "指定しない" , id: "search_area" ) %><br>
+    都道府県：　
+        <a onclick="prefToggle()" class="search_link">
+        <% if(params[:term]&&params[:term]=="place_id") %>🔴<% end %>県を選択
+        </a><!--
         <%= select_tag( "pref_", options_for_select([], params[:pref]), :prompt => "地方を選択してください" , id: "area_", class: "area-option" ) %>
         <%= select_tag( "pref_北海道", options_for_select([["北海道"]], params[:pref]), :prompt => "指定しない" , id: "area_北海道", class: "area-option hidden" ) %>
         <%= select_tag( "pref_東北", options_for_select([["青森県"], ["岩手県"], ["宮城県"], ["秋田県"], ["山形県"], ["福島県"]], params[:pref]), :prompt => "指定しない" , id: "area_東北", class: "area-option hidden" ) %>
@@ -23,7 +29,24 @@
         <% Place.order("id").each do |p| %>
             <% array.push( p ) %>
         <% end %>
-        <%= select_tag( :pref, options_from_collection_for_select( array, :id, :pref ), prompt: "指定しない" ) %>
+        <% select_tag( :pref, options_from_collection_for_select( array, :id, :pref ), prompt: "指定しない" ) %>
     </div>
 </div>
 <% end %>
+
+<div class="popup hidden" id="popup_area">
+    <div class="mini-title">地方から検索</div>
+    <% Place.select(:area).uniq.each do |p| %>
+        <a class="hyperlink" href="/events/search?&q=<%= p.area %>&term=area"><%= p.area %></a>
+    <% end %>
+    <a class="add-button" onclick="areaToggle()">キャンセル</a>
+</div>
+
+<div class="popup hidden" id="popup_pref">
+    <div class="mini-title">都道府県から検索</div>
+    <% @cnt = 0 %>
+    <% Place.order("id").each do |p| %>
+        <a class="hyperlink" href="/events/search?&q=<%= @cnt+=1 %>&term=place_id"><%= p.pref %></a>
+    <% end %>
+    <a class="add-button" onclick="prefToggle()">キャンセル</a>
+</div>
